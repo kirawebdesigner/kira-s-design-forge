@@ -1,16 +1,20 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Mail, Github, Linkedin, Twitter, MapPin, Send, Loader2 } from "lucide-react";
+import { ArrowUpRight, Mail, Github, Linkedin, MapPin, Send, Loader2 } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
+  { icon: Github, label: "GitHub", href: "https://github.com/kirawebdesigner/" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/kirubel-daniel/" },
 ];
+
+// Optional: add a Web3Forms access key to enable background sending (no email client popup)
+// Get one here: https://web3forms.com/
+const WEB3FORMS_ACCESS_KEY: string = "";
+const WEB3FORMS_UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 export const Contact = () => {
   const { toast } = useToast();
@@ -53,6 +57,29 @@ export const Contact = () => {
       return;
     }
 
+    const hasWeb3FormsKey = WEB3FORMS_UUID_REGEX.test(WEB3FORMS_ACCESS_KEY.trim());
+
+    // If no backend key is configured, fall back to opening the user's email client (still works without Cloud)
+    if (!hasWeb3FormsKey) {
+      const subject = formData.subject || "New Contact from Portfolio";
+      const body = [
+        `Name: ${formData.name}`,
+        `Email: ${formData.email}`,
+        "",
+        formData.message,
+      ].join("\n");
+
+      toast({
+        title: "Opening email…",
+        description: "Your email app will open to send this message.",
+      });
+
+      window.location.href = `mailto:kirubeldaniel01@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      return;
+    }
+
     setIsLoading(true);
 
     try {
@@ -63,7 +90,7 @@ export const Contact = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_WEB3FORMS_KEY", // User needs to replace this
+          access_key: WEB3FORMS_ACCESS_KEY,
           to: "kirubeldaniel01@gmail.com",
           from_name: formData.name,
           email: formData.email,

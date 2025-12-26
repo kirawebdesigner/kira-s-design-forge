@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, ExternalLink, Github, Plus } from "lucide-react";
-import { useState } from "react";
+import { ArrowUpRight, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import projectDentalcare from "@/assets/project-dentalcare.jpg";
@@ -52,7 +51,13 @@ const projects = [
 ];
 
 export const Projects = () => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const scrollToContact = () => {
+    const el = document.querySelector("#contact");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      window.history.replaceState(null, "", "#contact");
+    }
+  };
 
   return (
     <section id="work" className="py-32 relative">
@@ -76,7 +81,7 @@ export const Projects = () => {
             </p>
           </div>
           <a
-            href="https://github.com"
+            href="https://github.com/kirawebdesigner/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors shrink-0"
@@ -98,8 +103,6 @@ export const Projects = () => {
           >
             <Link
               to={`/project/${projects[0].slug}`}
-              onMouseEnter={() => setHoveredIndex(0)}
-              onMouseLeave={() => setHoveredIndex(null)}
               className="project-card block h-full"
             >
               <div className="relative overflow-hidden aspect-[16/10] rounded-t-xl">
@@ -146,8 +149,6 @@ export const Projects = () => {
           >
             <Link
               to={`/project/${projects[1].slug}`}
-              onMouseEnter={() => setHoveredIndex(1)}
-              onMouseLeave={() => setHoveredIndex(null)}
               className="project-card block h-full"
             >
               <div className="relative overflow-hidden aspect-[4/3] rounded-t-xl">
@@ -177,8 +178,6 @@ export const Projects = () => {
           >
             <Link
               to={`/project/${projects[2].slug}`}
-              onMouseEnter={() => setHoveredIndex(2)}
-              onMouseLeave={() => setHoveredIndex(null)}
               className="project-card block h-full"
             >
               <div className="relative overflow-hidden aspect-[4/3] rounded-t-xl">
@@ -208,8 +207,6 @@ export const Projects = () => {
           >
             <Link
               to={`/project/${projects[3].slug}`}
-              onMouseEnter={() => setHoveredIndex(3)}
-              onMouseLeave={() => setHoveredIndex(null)}
               className="project-card block h-full"
             >
               <div className="relative overflow-hidden aspect-[4/3] rounded-t-xl">
@@ -237,16 +234,18 @@ export const Projects = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Link
-              to="/#contact"
-              className="block h-full border border-dashed border-border rounded-xl p-8 flex flex-col items-center justify-center text-center hover:border-primary/50 hover:bg-secondary/30 transition-all duration-300"
+            <button
+              type="button"
+              onClick={scrollToContact}
+              className="block h-full w-full border border-dashed border-border rounded-xl p-8 flex flex-col items-center justify-center text-center hover:border-primary/50 hover:bg-secondary/30 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+              aria-label="Go to contact section"
             >
               <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center mb-4">
                 <Plus className="w-6 h-6 text-muted-foreground" />
               </div>
               <h3 className="text-xl font-display font-bold mb-2">Your Project Next?</h3>
               <p className="text-sm text-muted-foreground">Let's build something amazing together.</p>
-            </Link>
+            </button>
           </motion.div>
         </div>
       </div>
