@@ -132,7 +132,7 @@
   }
 
   .project-card {
-    @apply relative group overflow-hidden rounded-xl bg-card border border-border/30 transition-all duration-500;
+    @apply relative overflow-hidden rounded-xl bg-card border border-border/30 transition-all duration-500;
   }
 
   .project-card:hover {
@@ -141,7 +141,11 @@
   }
 
   .project-card-image {
-    @apply w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105;
+    @apply w-full aspect-video object-cover transition-transform duration-700;
+  }
+  
+  .project-card:hover .project-card-image {
+    @apply scale-105;
   }
 
   .stat-number {
