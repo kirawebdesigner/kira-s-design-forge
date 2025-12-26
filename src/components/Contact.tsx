@@ -13,7 +13,7 @@ const socialLinks = [
 
 // Optional: add a Web3Forms access key to enable background sending (no email client popup)
 // Get one here: https://web3forms.com/
-const WEB3FORMS_ACCESS_KEY: string = "";
+const WEB3FORMS_ACCESS_KEY: string = "58d974db-6556-470c-89c1-bc4e1b8c7d33";
 const WEB3FORMS_UUID_REGEX = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 export const Contact = () => {
