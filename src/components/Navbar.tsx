@@ -18,9 +18,9 @@ export const Navbar = () => {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 px-6 py-4"
+      className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6 py-3"
     >
-      <nav className="mx-auto max-w-7xl flex items-center justify-between">
+      <nav className="mx-auto max-w-7xl flex items-center justify-between px-4 py-2.5 rounded-2xl bg-background/60 backdrop-blur-xl border border-border/40 shadow-lg shadow-background/20">
         {/* Logo */}
         <motion.a
           href="#"
@@ -64,7 +64,7 @@ export const Navbar = () => {
         >
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
-      </nav>
+        </nav>
 
       {/* Mobile Menu */}
       {isOpen && (
