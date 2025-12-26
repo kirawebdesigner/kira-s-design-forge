@@ -1,28 +1,33 @@
 import { motion } from "framer-motion";
 import { Code, Layout, Database, Sparkles, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const services = [
   {
     icon: Layout,
     title: "Landing Pages",
+    slug: "landing-pages",
     description: "High-converting, responsive landing pages built with Framer or WordPress. Fast delivery, pixel-perfect execution.",
     features: ["UI/UX Design", "Responsive Design", "Performance Optimized", "SEO Ready"],
   },
   {
     icon: Code,
     title: "Web Applications",
+    slug: "web-applications",
     description: "Full-stack web apps with React and Supabase. Multi-user systems, dashboards, and complex business logic.",
     features: ["React + TypeScript", "Database Design", "Authentication", "Real-time Features"],
   },
   {
     icon: Database,
     title: "SaaS Development",
+    slug: "saas-development",
     description: "End-to-end SaaS product development. From architecture to deployment, built for scale.",
     features: ["Multi-tenant Architecture", "Payment Integration", "Analytics", "Admin Dashboards"],
   },
   {
     icon: Sparkles,
     title: "AI & Automation",
+    slug: "ai-automation",
     description: "AI agent development and workflow automation with n8n. Streamline operations and reduce manual work.",
     features: ["AI Agents", "n8n Workflows", "API Integrations", "Process Automation"],
   },
@@ -53,49 +58,50 @@ export const Services = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {services.map((service, index) => (
-            <motion.div
-              key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative bg-card border border-border rounded-2xl p-8 hover:border-primary/30 transition-all duration-500"
-            >
-              {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="w-7 h-7 text-primary" />
-              </div>
+            <Link key={service.title} to={`/service/${service.slug}`}>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative bg-card border border-border rounded-2xl p-6 md:p-8 hover:border-primary/30 transition-all duration-500 h-full"
+              >
+                {/* Icon */}
+                <div className="w-12 h-12 md:w-14 md:h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 md:mb-6 group-hover:bg-primary/20 transition-colors">
+                  <service.icon className="w-6 h-6 md:w-7 md:h-7 text-primary" />
+                </div>
 
-              {/* Content */}
-              <h3 className="text-2xl font-display font-bold mb-3">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                {service.description}
-              </p>
+                {/* Content */}
+                <h3 className="text-xl md:text-2xl font-display font-bold mb-2 md:mb-3 group-hover:text-primary transition-colors">
+                  {service.title}
+                </h3>
+                <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6">
+                  {service.description}
+                </p>
 
-              {/* Features */}
-              <ul className="grid grid-cols-2 gap-2 mb-6">
-                {service.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="text-sm text-muted-foreground flex items-center gap-2"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-primary" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
+                {/* Features */}
+                <ul className="grid grid-cols-2 gap-2 mb-4 md:mb-6">
+                  {service.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className="text-xs md:text-sm text-muted-foreground flex items-center gap-2"
+                    >
+                      <span className="w-1 h-1 rounded-full bg-primary flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
 
-              {/* Hover Arrow */}
-              <div className="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                <span className="text-sm font-medium">Learn more</span>
-                <ArrowRight className="w-4 h-4" />
-              </div>
+                {/* Hover Arrow */}
+                <div className="flex items-center gap-2 text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span className="text-sm font-medium">Learn more</span>
+                  <ArrowRight className="w-4 h-4" />
+                </div>
 
-              {/* Glow Effect on Hover */}
-              <div className="absolute inset-0 rounded-2xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
-            </motion.div>
+                {/* Glow Effect on Hover */}
+                <div className="absolute inset-0 rounded-2xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity -z-10 blur-xl" />
+              </motion.div>
+            </Link>
           ))}
         </div>
       </div>
