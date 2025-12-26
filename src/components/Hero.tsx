@@ -139,7 +139,7 @@ export const Hero = () => {
         delay: 1.5
       }} className="absolute bottom-10 left-1/2 -translate-x-1/2">
           <div className="flex flex-col items-center gap-2 text-muted-foreground">
-            <span className="text-xs uppercase tracking-widest">L</span>
+            
             <motion.div animate={{
             y: [0, 8, 0]
           }} transition={{
