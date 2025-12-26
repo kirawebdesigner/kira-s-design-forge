@@ -54,7 +54,7 @@ export const About = () => {
               once: true
             }} transition={{
               delay: 0.5
-            }} className="absolute -right-6 top-1/4 bg-card border border-border rounded-xl p-4 shadow-lg">
+            }} className="absolute -right-6 top-1/4 z-20 bg-card border border-border rounded-xl p-4 shadow-lg">
                 <div className="text-2xl font-display font-bold">G9</div>
                 <div className="text-xs text-muted-foreground">Student</div>
               </motion.div>
