@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "./ui/button";
 import heroAbstract from "@/assets/hero-abstract.jpg";
 export const Hero = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  return <header role="banner" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-30">
@@ -149,5 +149,5 @@ export const Hero = () => {
           </div>
         </motion.div>
       </div>
-    </section>;
+    </header>;
 };
