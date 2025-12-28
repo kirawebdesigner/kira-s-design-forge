@@ -93,7 +93,7 @@ const projectsData = {
     category: "LANDING PAGE & MOBILE APP",
     tagline: "Muslim Dating App - Find Your Halal Match",
     description: "A professional landing page and mobile app development for Zewijuna, a Muslim dating app that helps users find their halal match while keeping their values. Features beautiful UI/UX, matchmaking features, and a modern dating experience tailored for the Muslim community.",
-    image: "/src/assets/project-zewijuna.png",
+    image: "/src/assets/zewijuna-hero.png",
     link: "https://zewijuna.com",
     tags: ["React", "Mobile App", "UI/UX", "Landing Page"],
     stats: [
