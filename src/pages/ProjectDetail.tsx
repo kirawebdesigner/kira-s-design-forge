@@ -10,10 +10,10 @@ const projectsData = {
   "webos": {
     title: "Web-Based OS",
     category: "WEB APP",
-    tagline: "A multi-window desktop environment in-browser",
-    description: "A complete web-based operating system featuring TSX modules, import maps, taskbar, apps, and modular state management. Built to demonstrate complex frontend architecture.",
-    image: "/src/assets/project-webos.jpg",
-    link: "https://webbasedos.web.app",
+    tagline: "A browser-based operating system demo",
+    description: "A complete browser-based operating system featuring a desktop environment with taskbar, multiple apps, file management, terminal, and modular state management. Built to demonstrate complex frontend architecture in the browser.",
+    image: "/src/assets/webos-screenshot.png",
+    link: "https://webbasedos.web.app/",
     tags: ["React", "TypeScript", "State Management"],
     stats: [
       { label: "Development Time", value: "3 weeks", icon: Clock },
