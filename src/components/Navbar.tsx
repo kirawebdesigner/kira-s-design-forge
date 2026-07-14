@@ -4,7 +4,6 @@ import { Button } from "./ui/button";
 import { useState } from "react";
 
 const navItems = [
-  { label: "Work", href: "#work" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },

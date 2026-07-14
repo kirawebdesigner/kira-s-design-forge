@@ -87,8 +87,8 @@ export const Hero = () => {
           delay: 0.7
         }} className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button variant="hero" size="lg" asChild>
-              <a href="#work">
-                View Projects
+              <a href="#services">
+                Explore Services
                 <ArrowUpRight className="w-5 h-5" />
               </a>
             </Button>
@@ -110,7 +110,7 @@ export const Hero = () => {
             value: "10+",
             label: "Projects Shipped"
           }, {
-            value: "3+",
+            value: "4+",
             label: "SaaS Products"
           }, {
             value: "100%",

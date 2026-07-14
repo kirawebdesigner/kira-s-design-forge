@@ -24,7 +24,6 @@ export const Footer = () => {
 
           {/* Links */}
           <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
-            <a href="#work" className="hover:text-foreground transition-colors">Work</a>
             <a href="#about" className="hover:text-foreground transition-colors">About</a>
             <a href="#services" className="hover:text-foreground transition-colors">Services</a>
             <a href="#contact" className="hover:text-foreground transition-colors">Contact</a>

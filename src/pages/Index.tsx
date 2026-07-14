@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Marquee } from "@/components/Marquee";
-import { Projects } from "@/components/Projects";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Contact } from "@/components/Contact";
@@ -21,9 +20,6 @@ const Index = () => {
         <main>
           <Hero />
           <Marquee />
-          <section id="work" aria-label="Portfolio Projects">
-            <Projects />
-          </section>
           <section id="about" aria-label="About Kirubel Daniel">
             <About />
           </section>
