@@ -1,366 +1,216 @@
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link, Navigate } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import { ArrowLeft, ArrowUpRight, Clock, Users, Zap } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { ArrowLeft, ArrowUpRight, ExternalLink } from "lucide-react";
+import { projects } from "@/data/projects";
+import { EditorialNav } from "@/components/portfolio/EditorialNav";
+import { EditorialFooter } from "@/components/portfolio/EditorialFooter";
 
-// Project data with full details
-const projectsData = {
-  "webos": {
-    title: "Web-Based OS",
-    category: "WEB APP",
-    tagline: "A browser-based operating system demo",
-    description: "A complete browser-based operating system featuring a desktop environment with taskbar, multiple apps, file management, terminal, and modular state management. Built to demonstrate complex frontend architecture in the browser.",
-    image: "/src/assets/webos-screenshot.png",
-    link: "https://webbasedos.web.app/",
-    tags: ["React", "TypeScript", "State Management"],
-    stats: [
-      { label: "Development Time", value: "3 weeks", icon: Clock },
-      { label: "Components", value: "50+", icon: Zap },
-      { label: "User Experience", value: "Desktop-like", icon: Users },
-    ],
-    challenge: "Traditional web apps feel constrained. The challenge was to create a fully functional desktop environment that runs entirely in the browser, with proper window management, app switching, and persistent state.",
-    solution: "Built a modular architecture using React with custom window management hooks, drag-and-drop functionality, and a centralized state system. Each app runs in isolation with shared system resources.",
-    process: [
-      { step: "Architecture Design", description: "Designed the core OS structure, window manager, and app loader system." },
-      { step: "Window Management", description: "Implemented draggable, resizable windows with z-index management and taskbar integration." },
-      { step: "App Ecosystem", description: "Created a modular app system allowing independent apps to be loaded dynamically." },
-      { step: "Polish & UX", description: "Added animations, keyboard shortcuts, and refined the desktop experience." },
-    ],
-    results: [
-      "+40% faster than similar web OS implementations",
-      "Seamless multi-window experience",
-      "100% client-side, no backend required",
-    ],
-  },
-  "dentalcare": {
-    title: "DentalCare System",
-    category: "WEB APP",
-    tagline: "Dental Patient Management System with Role-Based Access",
-    description: "A comprehensive dental clinic management system with multi-role access for Admin, Doctor, and Reception staff. Features patient records, appointments, treatments, billing, and real-time dashboard analytics. Built with React and Supabase.",
-    image: "/src/assets/dentalcare-dashboard.png",
-    link: "https://dentalcare-1.web.app/",
-    tags: ["React", "Supabase", "Healthcare", "Role-Based"],
-    stats: [
-      { label: "Development Time", value: "4 weeks", icon: Clock },
-      { label: "User Roles", value: "3", icon: Users },
-      { label: "Features", value: "25+", icon: Zap },
-    ],
-    challenge: "Dental clinics often use outdated paper-based systems or expensive software. The goal was to create an affordable, modern solution that handles the complete patient journey with proper role separation.",
-    solution: "Developed a role-based system with separate dashboards for admins (full access), doctors (patient records & treatments), and receptionists (appointments & billing). Integrated real-time appointment scheduling, patient history tracking, and automated payment processing.",
-    process: [
-      { step: "Research & Planning", description: "Interviewed clinic staff to understand workflows and pain points for each role." },
-      { step: "Database Architecture", description: "Designed a scalable schema with Supabase for real-time sync and secure role-based access." },
-      { step: "Role-Based UI", description: "Created tailored interfaces for Admin, Doctor, and Reception with appropriate permissions." },
-      { step: "Testing & Deployment", description: "Thorough testing with real clinic data and iterative improvements." },
-    ],
-    results: [
-      "60% reduction in appointment booking time",
-      "Real-time updates across all user roles",
-      "Secure patient data with role-based access control",
-    ],
-  },
-  "sims": {
-    title: "SIMS-ET",
-    category: "WEB APP",
-    tagline: "Award-Winning Student Information Management System",
-    description: "A complete school management platform built for a competition project - and we won! Features multi-role access (Admin, Teacher, Student/Parent), attendance tracking, grade management, and real-time analytics. Built with React and Supabase.",
-    image: "/src/assets/sims-dashboard.png",
-    link: "https://sims-et.web.app/",
-    tags: ["React", "Supabase", "Education", "Competition Winner"],
-    stats: [
-      { label: "User Roles", value: "3", icon: Users },
-      { label: "CRUD Operations", value: "Full", icon: Zap },
-      { label: "Updates", value: "Real-time", icon: Clock },
-    ],
-    challenge: "Ethiopian schools need affordable, locally-relevant management software. This project was developed for a school competition, requiring a comprehensive solution that handles students, teachers, attendance, and grades effectively.",
-    solution: "Built a comprehensive system tailored for Ethiopian schools with multi-role access, grade management, attendance tracking with visual analytics, event management, and payment tracking features.",
-    process: [
-      { step: "Requirements Gathering", description: "Analyzed school management needs and competition requirements." },
-      { step: "System Design", description: "Created a flexible architecture supporting multiple user types with role-based dashboards." },
-      { step: "Feature Development", description: "Built core features: attendance tracking, grades, schedules, events, and reporting." },
-      { step: "Competition & Win", description: "Presented the project and won the competition!" },
-    ],
-    results: [
-      "Competition-winning project",
-      "Real-time attendance analytics",
-      "Multi-role dashboard system",
-    ],
-  },
-  "landing": {
-    title: "Zewijuna",
-    category: "MUSLIM DATING APP",
-    tagline: "Find Your Halal Match — A Dating App Built for Muslims",
-    description: "Zewijuna is a Muslim dating mobile app designed to help users find meaningful, halal connections while staying true to their faith. The project included full UI/UX design for iOS & Android, a high-converting marketing landing page, and branding that balances modern aesthetics with cultural respect.",
-    image: "/src/assets/zewijuna-hero.png",
-    link: "https://zewijuna.com",
-    tags: ["Mobile App", "UI/UX", "Landing Page", "Branding"],
-    stats: [
-      { label: "Platform", value: "iOS & Android", icon: Zap },
-      { label: "Screens Designed", value: "30+", icon: Clock },
-      { label: "User Experience", value: "Premium", icon: Users },
-    ],
-    challenge: "The Muslim dating market lacks apps that genuinely respect Islamic values while offering a polished, modern experience. Zewijuna needed to feel trustworthy, culturally sensitive, and premium — standing apart from generic dating apps.",
-    solution: "Designed a complete brand identity and mobile app experience centered on halal matchmaking, user verification, and privacy-first features. The landing page drives conversions with compelling visuals and clear value propositions tailored to the Muslim community.",
-    process: [
-      { step: "Market Research", description: "Analyzed the Muslim dating landscape and identified gaps in culturally respectful, modern app experiences." },
-      { step: "Branding & UI/UX", description: "Crafted a warm, inviting visual identity with elegant typography and a pink/coral palette conveying love and trust." },
-      { step: "Landing Page", description: "Built a high-converting marketing page with app previews, feature highlights, and download CTAs." },
-      { step: "Mobile App Design", description: "Designed 30+ screens covering onboarding, matchmaking, chat, profiles, and settings for iOS & Android." },
-    ],
-    results: [
-      "Culturally authentic Muslim dating experience",
-      "30+ professionally designed mobile screens",
-      "High-converting landing page with strong engagement",
-    ],
-  },
+const ease = [0.22, 1, 0.36, 1] as const;
+
+const typeLabel: Record<string, string> = {
+  client: "Client work",
+  product: "Product",
+  experiment: "Experiment",
 };
 
-export default function ProjectDetail() {
+const ProjectDetail = () => {
   const { slug } = useParams();
-  const navigate = useNavigate();
-  const project = slug ? projectsData[slug as keyof typeof projectsData] : null;
+  const project = projects.find((p) => p.slug === slug);
+  if (!project) return <Navigate to="/" replace />;
 
-  if (!project) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-display font-bold mb-4">Project Not Found</h1>
-          <Button onClick={() => navigate("/")} variant="glow">
-            Go Home
-          </Button>
-        </div>
-      </div>
-    );
-  }
+  const others = projects.filter((p) => p.slug !== project.slug).slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
-        
-        <div className="container mx-auto px-6 relative z-10">
-          {/* Back Button */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Link 
-              to="/#work" 
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-8"
-            >
-              <ArrowLeft className="w-4 h-4" />
-              Back to Projects
-            </Link>
-          </motion.div>
+    <>
+      <Helmet>
+        <title>{project.title} — {project.tagline} | Kirubel Daniel</title>
+        <meta name="description" content={project.summary} />
+        <link rel="canonical" href={`https://kiraweb.pro.et/project/${project.slug}`} />
+        <meta property="og:title" content={`${project.title} — ${project.tagline}`} />
+        <meta property="og:description" content={project.summary} />
+        <meta property="og:url" content={`https://kiraweb.pro.et/project/${project.slug}`} />
+      </Helmet>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Content */}
-            <motion.div
+      <div className="min-h-screen bg-background text-foreground">
+        <EditorialNav />
+
+        <article className="pt-32 pb-24">
+          <div className="container-editorial">
+            <Link to="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-ember mb-12">
+              <ArrowLeft className="w-4 h-4" /> All work
+            </Link>
+
+            {/* Header */}
+            <motion.header
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.9, ease }}
+              className="grid md:grid-cols-12 gap-8 items-end mb-16"
             >
-              <span className="section-label mb-4">{project.category}</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mt-4 mb-4">
-                {project.title}
-              </h1>
-              <p className="text-xl text-muted-foreground mb-6">
-                {project.tagline}
-              </p>
-              <p className="text-muted-foreground mb-8">
-                {project.description}
-              </p>
+              <div className="md:col-span-8">
+                <div className="flex flex-wrap items-center gap-3 mb-6">
+                  <span className="eyebrow text-ember">{typeLabel[project.type]}</span>
+                  <span className="eyebrow">·</span>
+                  <span className="eyebrow">{project.category}</span>
+                  <span className="eyebrow">·</span>
+                  <span className="eyebrow">{project.year}</span>
+                </div>
+                <h1 className="display-hero text-6xl md:text-8xl leading-[0.9]">{project.title}</h1>
+                <p className="mt-6 text-xl md:text-2xl text-muted-foreground max-w-2xl leading-snug">
+                  {project.tagline}
+                </p>
+              </div>
 
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-8">
-                {project.tags.map((tag) => (
-                  <span 
-                    key={tag} 
-                    className="px-3 py-1 bg-secondary rounded-full text-sm text-muted-foreground"
+              <div className="md:col-span-4 space-y-4">
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 bg-bone text-ink px-5 py-3 text-sm font-medium hover:bg-ember transition-colors w-full justify-between"
                   >
-                    {tag}
-                  </span>
+                    Visit live project
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                )}
+                <dl className="border-t border-border pt-6 space-y-3 text-sm">
+                  {project.client && <Meta label="Client" value={project.client} />}
+                  <Meta label="Role" value={project.role} />
+                  <Meta label="Year" value={project.year} />
+                  <Meta label="Status" value={project.status} />
+                </dl>
+              </div>
+            </motion.header>
+
+            {/* Cover */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.98 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.1, ease, delay: 0.1 }}
+              className="relative aspect-[21/10] overflow-hidden bg-secondary mb-24"
+            >
+              <img src={project.cover} alt={project.title} className="w-full h-full object-cover" />
+            </motion.div>
+
+            {/* Case study body */}
+            <div className="grid md:grid-cols-12 gap-12 mb-24">
+              <div className="md:col-span-3">
+                <div className="md:sticky md:top-28">
+                  <div className="eyebrow mb-4">Case study</div>
+                  <ol className="space-y-2 font-mono text-xs text-muted-foreground">
+                    <li>01 — Summary</li>
+                    <li>02 — The problem</li>
+                    <li>03 — The build</li>
+                    <li>04 — Decisions</li>
+                    <li>05 — Outcome</li>
+                    <li>06 — What I learned</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div className="md:col-span-9 space-y-16">
+                <Section n="01" title="Summary" body={project.summary} />
+                <Section n="02" title="The problem" body={project.problem} />
+                <Section n="03" title="The build" body={project.build} />
+
+                <div>
+                  <SectionHead n="04" title="Decisions" />
+                  <ul className="space-y-4">
+                    {project.decisions.map((d, i) => (
+                      <li key={i} className="flex items-baseline gap-4 text-lg leading-relaxed">
+                        <span className="font-mono text-xs text-ember shrink-0 mt-1">04.{i + 1}</span>
+                        <span className="text-muted-foreground">{d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <Section n="05" title="Outcome" body={project.outcome} />
+                <Section n="06" title="What I learned" body={project.learned} />
+
+                <div>
+                  <SectionHead n="07" title="Technology" />
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((t) => (
+                      <span key={t} className="font-mono text-xs uppercase tracking-wider text-muted-foreground border border-border px-3 py-1.5">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Gallery */}
+            {project.gallery.length > 1 && (
+              <div className="mb-24">
+                <div className="eyebrow mb-6">Selected screens</div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {project.gallery.map((img, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, margin: "-80px" }}
+                      transition={{ duration: 0.8, ease }}
+                      className="relative aspect-[16/10] overflow-hidden bg-secondary"
+                    >
+                      <img src={img} alt={`${project.title} — ${i + 1}`} className="w-full h-full object-cover" />
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Next projects */}
+            <div className="border-t border-border pt-16">
+              <div className="eyebrow mb-8">Keep exploring</div>
+              <div className="grid md:grid-cols-3 gap-6">
+                {others.map((p) => (
+                  <Link key={p.slug} to={`/project/${p.slug}`} className="group block">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-secondary mb-4">
+                      <img src={p.cover} alt={p.title} className="w-full h-full object-cover transition-transform duration-[1400ms] group-hover:scale-[1.04]" />
+                    </div>
+                    <div className="flex items-baseline justify-between">
+                      <div>
+                        <div className="eyebrow mb-1">{typeLabel[p.type]}</div>
+                        <div className="font-display text-xl">{p.title}</div>
+                      </div>
+                      <ArrowUpRight className="w-4 h-4 text-muted-foreground group-hover:text-ember transition-colors" />
+                    </div>
+                  </Link>
                 ))}
               </div>
-
-              {/* CTA */}
-              <Button variant="glow" size="lg" asChild>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  View Live Project
-                  <ArrowUpRight className="w-5 h-5 ml-2" />
-                </a>
-              </Button>
-            </motion.div>
-
-            {/* Image */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="aspect-video rounded-2xl overflow-hidden border border-border bg-card">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Glow effect */}
-              <div className="absolute -inset-4 bg-primary/10 rounded-3xl blur-3xl -z-10" />
-            </motion.div>
-          </div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-3 gap-6 mt-16 max-w-3xl"
-          >
-            {project.stats.map((stat, index) => (
-              <div key={stat.label} className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                  <stat.icon className="w-5 h-5 text-primary" />
-                  <span className="text-2xl md:text-3xl font-display font-bold text-primary">
-                    {stat.value}
-                  </span>
-                </div>
-                <span className="text-sm text-muted-foreground uppercase tracking-wider">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Challenge Section */}
-      <section className="py-20 bg-secondary/20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                The Challenge
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                {project.challenge}
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="mb-12"
-            >
-              <span className="section-label mb-4">THE PROCESS</span>
-              <h2 className="text-3xl md:text-4xl font-display font-bold mt-4">
-                From Chaos to Clarity
-              </h2>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {project.process.map((item, index) => (
-                <motion.div
-                  key={item.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="relative pl-8 border-l border-border"
-                >
-                  <div className="absolute left-0 top-0 w-3 h-3 -translate-x-1.5 rounded-full bg-primary" />
-                  <span className="text-sm text-primary font-medium">0{index + 1}</span>
-                  <h3 className="text-xl font-display font-bold mt-1 mb-2">{item.step}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </motion.div>
-              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </article>
 
-      {/* Solution Section */}
-      <section className="py-20 bg-secondary/20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
-                The Solution
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                {project.solution}
-              </p>
-
-              {/* Results */}
-              <div className="bg-card border border-border rounded-2xl p-8">
-                <h3 className="text-xl font-display font-bold mb-4">Key Results</h3>
-                <ul className="space-y-3">
-                  {project.results.map((result, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <span className="w-2 h-2 rounded-full bg-primary mt-2 shrink-0" />
-                      <span className="text-muted-foreground">{result}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="max-w-3xl mx-auto text-center"
-          >
-            <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-              Ready to build something <span className="gradient-text">amazing?</span>
-            </h2>
-            <p className="text-muted-foreground mb-8">
-              Let's discuss your project and bring your vision to life.
-            </p>
-            <Button variant="glow" size="lg" asChild>
-              <Link to="/#contact">
-                Start a Project
-                <ArrowUpRight className="w-5 h-5 ml-2" />
-              </Link>
-            </Button>
-          </motion.div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
+        <EditorialFooter />
+      </div>
+    </>
   );
-}
+};
+
+const Meta = ({ label, value }: { label: string; value: string }) => (
+  <div className="flex items-baseline justify-between gap-4">
+    <dt className="eyebrow shrink-0">{label}</dt>
+    <dd className="text-right text-sm max-w-[70%]">{value}</dd>
+  </div>
+);
+
+const SectionHead = ({ n, title }: { n: string; title: string }) => (
+  <div className="flex items-baseline gap-4 mb-5">
+    <span className="font-mono text-xs text-ember">{n}</span>
+    <h2 className="font-display text-3xl md:text-4xl">{title}</h2>
+  </div>
+);
+
+const Section = ({ n, title, body }: { n: string; title: string; body: string }) => (
+  <div>
+    <SectionHead n={n} title={title} />
+    <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">{body}</p>
+  </div>
+);
+
+export default ProjectDetail;
