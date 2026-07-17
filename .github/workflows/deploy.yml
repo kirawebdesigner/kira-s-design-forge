@@ -1,0 +1,30 @@
+name: Deploy portfolio to DirectAdmin
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out portfolio
+        uses: actions/checkout@v4
+
+      - name: Prepare static site
+        shell: bash
+        run: |
+          mkdir -p _site
+          cp index.html 404.html _site/
+          cp -R 404 assets work _site/
+
+      - name: Publish static site via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./_site/
+          server-dir: ./domains/kiraweb.pro.et/public_html/
+          state-name: .ftp-deploy-sync-state.json
