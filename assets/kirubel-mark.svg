@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1072" role="img" aria-labelledby="title desc">
+  <title id="title">Kirubel Daniel monogram</title>
+  <desc id="desc">A minimal black and warm-white KD identity mark.</desc>
+  <rect width="800" height="1072" rx="48" fill="#11110f"/>
+  <circle cx="400" cy="536" r="252" fill="#f2efe9"/>
+  <text x="400" y="590" text-anchor="middle" fill="#11110f" font-family="Arial, Helvetica, sans-serif" font-size="210" font-weight="700" letter-spacing="-18">KD</text>
+</svg>
