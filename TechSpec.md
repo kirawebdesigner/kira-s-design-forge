@@ -2,16 +2,19 @@
 
 ## Current Architecture
 
-The project is a static Framer export consisting of 18 self-contained HTML files:
+The project is a static Framer export consisting of nine retained public HTML files:
 
 - `/index.html`
+- `/404.html`
 - `/404/index.html`
 - `/work/index.html`
-- Seven existing `/work/*/index.html` detail pages
-- `/blog/index.html`
-- Seven existing `/blog/*/index.html` article pages
+- `/work/zewijuna/index.html`
+- `/work/yourcloser/index.html`
+- `/work/dms/index.html`
+- `/work/pommy/index.html`
+- `/work/majestic/index.html`
 
-There is no `package.json`, source component tree, local asset directory, build system, or Git repository. Framer-generated CSS, serialized React data, runtime scripts, fonts, and most images are referenced from `framerusercontent.com`.
+There is no `package.json`, source component tree, or build system. The static site is tracked in Git and retains Framer-generated CSS, serialized data, runtime scripts, and fonts. Project screenshots and the homepage restoration layer are local under `assets/`.
 
 ## Implementation Strategy
 
@@ -20,6 +23,7 @@ There is no `package.json`, source component tree, local asset directory, build 
 - Prefer controlled transformation scripts for repeated, deterministic changes, but keep the final deliverable deployable as static files.
 - Store captured project screenshots locally under `assets/projects/<project>/`.
 - Add only minimal custom CSS or JavaScript when generated markup cannot support required content safely.
+- Use the shared `portfolio-restoration.css` and `portfolio-restoration.js` layer for the synchronized footer, accessible mobile menu, read-along behavior, contact flow, and export-specific visibility fixes.
 - Avoid introducing a new framework unless the static export proves impossible to maintain without breaking behavior.
 
 ## Local Development
@@ -40,8 +44,9 @@ Target public routes:
 - `/work/pommy/`
 - `/work/majestic/`
 - `/404/` — portfolio-branded not-found page
+- `/404.html` — direct static-host not-found document
 
-Existing surplus work and blog routes will be removed, redirected, or excluded from navigation only after link integrity is preserved.
+Retired project and editorial routes have been removed. Retained navigation uses root-relative links so nested case-study pages resolve consistently.
 
 ## Data and Content
 
@@ -57,7 +62,8 @@ Unverified facts must not appear. The user-supplied clinic dashboard screenshot 
 
 ## Contact
 
-- Use a direct `mailto:` link only after confirming Kirubel's email.
+- The confirmed portfolio address is `contact@kiraweb.pro.et`.
+- The homepage contact form validates Name, Email, and Project / message, then opens a transparent prefilled `mailto:` draft. It does not claim backend submission.
 - Hide unconfirmed social and external profile links rather than inventing destinations.
 - Preserve the template's contact interaction and visual composition.
 
@@ -70,13 +76,15 @@ Unverified facts must not appear. The user-supplied clinic dashboard screenshot 
 ## Validation
 
 - HTML/link audit
-- Automated screenshots at all required viewport widths
+- Automated screenshots at all required viewport widths across all nine retained routes
+- Fresh full-page evidence captures at 390px and 1440px for the homepage, work index, five case studies, and not-found page
 - Horizontal overflow and clipping checks
 - Navigation and mobile-menu interaction checks
+- Scroll-linked read-along, rapid-scroll, reverse-scroll, and reduced-motion checks
 - Browser console error capture
 - Static-server smoke test
 - Typecheck/lint/build only if tooling exists or is intentionally added; otherwise report as not configured
 
 ## Hosting
 
-The output remains host-agnostic static HTML suitable for GitHub Pages, Netlify, Cloudflare Pages, or equivalent static hosting. No deployment or remote change is authorized yet.
+The output remains host-agnostic static HTML. Production is currently published to `kiraweb.pro.et` by `.github/workflows/deploy.yml`: a push to `main` prepares the retained static files and uploads them to the existing DirectAdmin document root over FTP. Deployment was explicitly authorized on 2026-07-20.

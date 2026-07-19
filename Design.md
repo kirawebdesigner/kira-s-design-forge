@@ -46,9 +46,22 @@ Do not introduce:
 
 ## Motion and Interaction
 
-- Preserve Framer's existing page transitions, scroll behavior, hover states, image scaling, and menu interactions.
+- Preserve Framer's existing page transitions, scroll behavior, hover states, and image scaling where they remain reliable.
 - Remove animation only if it is broken, inaccessible, or tied exclusively to removed template promotion.
-- Respect `prefers-reduced-motion` behavior already provided by the export.
+- The manifesto uses one accessible sentence plus assistive-technology-hidden phrase spans whose opacity follows reversible section scroll progress. It is not a one-time reveal.
+- The mobile navigation uses a labeled modal overlay with keyboard open/close behavior, Escape support, focus trapping, and focus return.
+- Respect `prefers-reduced-motion`: all manifesto phrases and reveal content remain fully visible, and menu/reveal transitions are disabled.
+- Homepage restoration content uses a short, non-blocking rise animation that remains readable from its first frame; reduced-motion mode removes it completely.
+
+## Restored Homepage Systems
+
+- Services use six full-width rows with separators and horizontal hover movement.
+- Featured work uses four two-column cards plus a deliberate full-width fifth card on desktop, collapsing to one column on mobile.
+- Builder Mindset uses four high-contrast principle cards with readable copy instead of screenshot thumbnails.
+- Capabilities use a numbered editorial list rather than a logo wall.
+- Contact and footer use rich dark compositions consistent with the template's original visual weight.
+- The hero's original 3D avatar component displays Kirubel's supplied portrait with a centered face crop.
+- Every retained route uses one synchronized black footer with the statement, quick links, identity, Addis Ababa location, confirmed email, and large KIRUBEL wordmark.
 
 ## Image Treatment
 
@@ -65,4 +78,3 @@ Do not introduce:
 320, 360, 375, 390, 412, 430, 768, 1024, 1440, and 1920 pixels.
 
 Check typography, navigation, menu, cards, image crops, buttons, contact section, footer, animations, and overflow at each width.
-

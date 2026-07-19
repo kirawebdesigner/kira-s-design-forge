@@ -1,5 +1,16 @@
 # Implementation Plan
 
+## Current Restoration Pass
+
+- [x] Restore the manifesto as a reversible scroll-progress read-along without rehydrating retired template content.
+- [x] Rebuild Services, Featured Projects, Builder Mindset, Capabilities, Contact, and Footer inside their existing section roots.
+- [x] Add Kirubel's supplied portrait to the original hero avatar component.
+- [x] Standardize all contact destinations on `contact@kiraweb.pro.et`.
+- [x] Synchronize the complete footer and accessible mobile menu across all nine retained routes.
+- [x] Integrate the supplied Zewijuna, Pommy, and Majestic full-page captures at their native proportions.
+- [x] Re-run visual screenshots, the 90-page responsive matrix, console/image/link/accessibility checks, menu keyboard behavior, form fallback, and reduced motion.
+- [x] Keep the restoration local through final audit, then publish through the existing GitHub Actions/DirectAdmin workflow after explicit authorization on 2026-07-20.
+
 ## Phase 1 — Audit and Baseline
 
 - Inventory all routes, page titles, sections, links, images, metadata, and Framer promotional elements.
@@ -52,3 +63,9 @@
 - Ensure no secrets or private data were added.
 - Prepare a clean static project ready for a future GitHub repository.
 - Produce the full requested report and explicit screenshot, project-information, and link checklists.
+
+## Final Audit Evidence
+
+- Nine retained routes tested at ten required viewport widths: 90/90 passing.
+- Fresh 390px and 1440px full-page captures stored outside production assets under `qa-artifacts/final-audit/`.
+- Automated interaction checks cover the manifesto, mobile-menu keyboard flow, reduced motion, project-card hover, contact form validation/draft, link integrity, image loading, headings, labels, overflow, hidden content, footer consistency, and template residue.
