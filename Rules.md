@@ -53,3 +53,14 @@
 - Test every required viewport.
 - Check for horizontal overflow, clipped headings, broken cards, image distortion, navigation failures, and console errors.
 - Re-scan all retained HTML for template identity, fake links, and excluded-project references before completion.
+
+## Production Performance Rules
+
+- Measure before and after; retain raw browser and Lighthouse artifacts.
+- Never load full-page screenshot sources on the homepage or work index.
+- Use responsive WebP/AVIF derivatives, explicit dimensions, accurate alt text, and priority only for genuinely critical imagery.
+- Primary content and the hero H1 must remain complete and readable without JavaScript, remote fonts, or animation.
+- Remove Framer runtime code only after every route passes visual and interaction regression checks.
+- Do not apply immutable caching to HTML or non-versioned files without a revalidation strategy.
+- Do not initialize Git or migrate to React. The manifesto release is authorized for commit, push, and deployment after local validation passes.
+- Do not install Astryx into this static export; apply compatible component principles with native HTML and CSS.

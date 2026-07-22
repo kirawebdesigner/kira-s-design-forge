@@ -43,6 +43,8 @@ The homepage must quickly answer:
   - Pommy
   - Majestic
 - Convert five existing work-detail routes into accurate product case studies.
+- Feature KirzKit separately as an Open Source / Developer Tools project, not as a sixth product case study.
+- Link the verified GitHub and LinkedIn profiles from the shared footer.
 - Remove or repurpose unused template project and blog routes without leaving visible dead ends.
 - Use only real project facts, screenshots, and confirmed links.
 - Capture real product screenshots directly where accessible.
@@ -67,3 +69,18 @@ The homepage must quickly answer:
 - Navigation and internal links resolve correctly.
 - No material browser-console errors are introduced.
 - Available validation checks pass; unavailable checks are explicitly reported.
+
+## Manifesto Component Release
+
+- Replace the oversized single-paragraph manifesto with a compact, recruiter-readable product-approach component.
+- Preserve the portfolio's editorial monochrome identity while improving hierarchy, pacing, mobile readability, and reduced-motion behavior.
+- Keep the implementation framework-free; Astryx is used as a component-design reference because its React packages are incompatible with this static export.
+- Commit and publish the fully validated portfolio through the existing DirectAdmin deployment workflow.
+
+## Production Optimization Pass
+
+- Reduce the homepage and work-index image payload with responsive WebP/AVIF derivatives while retaining original source files.
+- Make all primary content available in static HTML so the complete portfolio remains readable without JavaScript.
+- Preserve the current Framer-inspired visual direction while targeting desktop Performance 90+, mobile Performance 75+, Accessibility 100, Best Practices 100, and repository-controlled SEO 100.
+- Publish valid crawler files, canonical metadata, verified structured data, safe static-host security headers, and appropriate cache policy.
+- React migration remains outside this pass. The later manifesto release explicitly authorizes a commit and production deployment.

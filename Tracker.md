@@ -2,24 +2,45 @@
 
 ## Current Sprint
 
-Full-site restoration and final audit complete; production release authorized
+Manifesto component production release
 
 ## In Progress
 
-- None
+- [x] Validate the redesigned manifesto component across desktop, tablet, mobile, reduced motion, and production performance.
+- [ ] Commit, push, and verify the authorized production deployment.
 
 ## To Do
 
-- [ ] Confirm Kirubel's optional public social-profile links
 - [ ] Add a public DMS URL if one becomes available
 
 ## Done
 
+- [x] Pass final manifesto Lighthouse medians: desktop 99 and mobile 82, with Accessibility, Best Practices, and SEO at 100
+- [x] Pass the four-viewport manifesto audit with zero overflow, console errors, failed requests, duplicate IDs, heading failures, or reduced-motion failures
+- [x] Replace the oversized manifesto paragraph with a compact semantic product-approach component.
+- [x] Keep the implementation static while applying Astryx-inspired component composition and accessibility principles.
+
+- [x] Pass final Lighthouse medians: desktop 99 and mobile 80, with Accessibility, Best Practices, and SEO at 100
+- [x] Pass the final 32-route/viewport matrix with zero broken images, console errors, overflow, CLS, or H1 failures
+- [x] Refresh Pommy from the user-supplied updated full-page screenshot and create 26 optimized versioned derivatives
+- [x] Add KirzKit as an open-source/tooling project without changing the five-project case-study set
+- [x] Add verified GitHub and LinkedIn links across all route footers and Person structured data
+- [x] Apply the design-taste frontend direction to project screenshot presentation without introducing a framework or dependency
+- [x] Create asymmetric desktop project rhythms while preserving the mobile reading order
+- [x] Add one consistent editorial stage treatment to homepage, work, and case-study screenshots
+- [x] Tighten the manifesto layout and scroll runway shown in the supplied screenshot
+- [x] Produce the final evidence-backed optimization report
+- [x] Optimize responsive project images and remove full-page assets from homepage/work-index requests
+- [x] Convert JavaScript-restored content into static first-paint HTML
+- [x] Self-host the minimum verified font set and remove obsolete Framer runtime/font requests
+- [x] Fix footer contrast, canonicals, crawler files, structured data, cache policy, and security headers
+- [x] Run the complete before/after route, interaction, accessibility, SEO, and performance validation matrix
+- [x] Apply restrained design-taste polish without changing the portfolio's visual direction
 - [x] Identify the root cause of blank sections as orphaned Framer initial animation states
 - [x] Restore six service rows and five homepage project cards
 - [x] Replace broken Builder Mindset thumbnails with four readable principle cards
 - [x] Restore ten capability rows, contact form, and rich footer
-- [x] Replace all portfolio contact email references with `contact@kiraweb.pro.et`
+- [x] Replace all portfolio contact email references with `contact@kira.pro.et`
 - [x] Add Kirubel's supplied portrait to the original hero avatar component
 - [x] Confirm retired template residue scan returns zero results
 - [x] Complete the final full responsive and browser QA rerun after restoration
@@ -52,7 +73,8 @@ Full-site restoration and final audit complete; production release authorized
 ## Known Issues and Blockers
 
 - The supplied template video was available and used for hero and section-pacing comparison; no separate current-site comparison video was supplied.
-- Most template runtime/font resources remain remote Framer resources because they are required by the export.
+- The generated Framer CSS and some responsive wrapper markup remain because removing them would risk visual regressions; the remote React/Motion/Framer runtime and remote fonts are no longer requested.
 - Public social-profile URLs are not confirmed and therefore remain hidden.
 - DMS has no confirmed public deployment URL; its CTA remains an internal project overview.
-- Production publishing uses the existing `main` branch workflow; the pre-release rollback point is commit `3d6898c`.
+- Production publishing uses the existing `main` branch workflow. This optimization pass was not committed, pushed, or deployed.
+- Hosting-level TTFB and CDN behavior require live infrastructure measurement and cannot be guaranteed by local repository changes alone.

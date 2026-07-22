@@ -78,3 +78,34 @@ Do not introduce:
 320, 360, 375, 390, 412, 430, 768, 1024, 1440, and 1920 pixels.
 
 Check typography, navigation, menu, cards, image crops, buttons, contact section, footer, animations, and overflow at each width.
+
+## Manifesto Component Direction
+
+- Design read: a recruiter-facing product-builder portfolio with a restrained editorial/brutalist language.
+- Dials: `DESIGN_VARIANCE 6`, `MOTION_INTENSITY 4`, `VISUAL_DENSITY 4`.
+- Replace the oversized single text block with one semantic, two-column component: concise framing on the left and four direct principles on the right.
+- On mobile, collapse to a natural single-column reading order with no sticky scroll runway.
+- Use only opacity and transform for progressive emphasis; all lines remain visible with reduced motion or without animation support.
+- Apply Astryx's accessible, composable component principles without importing its React/StyleX runtime into the static site.
+
+## Performance Preservation Rules
+
+- Redesign mode is `preserve`: keep the existing design variance, motion intensity, visual density, theme, accent, radii, spacing rhythm, and copy hierarchy.
+- Use responsive image derivatives without changing the visual crop or card proportions.
+- The hero H1 is fully visible in the initial static paint. Any enhancement may use only a subtle immediate transform and must never hide the text.
+- Keep manifesto storytelling, but animate only opacity and transform, batch updates, and render the final state immediately for reduced motion.
+- Increase footer micro-heading contrast just enough to pass WCAG AA while preserving hierarchy.
+- Do not install Astryx packages or migrate the site to React. Astryx may inform component semantics and state design where native HTML/CSS provides the compatible implementation.
+
+## Screenshot Presentation Evolution
+
+- Redesign mode is now a targeted evolution for project presentation only. The editorial identity, typography, content, routes, and light-to-dark closing sequence remain intact.
+- Project galleries use a 12-column asymmetric rhythm at desktop widths: 7/5, 5/7, then one full-width project. Mobile remains a clear single-column sequence.
+- Every project image sits inside one solid warm-neutral stage with an 18px outer radius, a 10px inner radius, restrained border, and quiet depth. The screenshots provide the color; the portfolio shell stays monochrome.
+- Project names and descriptions remain below the images, never overlaid on product evidence.
+- Case-study images and full-page scroll previews use the same stage treatment so product evidence feels intentional across every route.
+- Hover movement is limited to a small lift and subtle image scale using transform and shadow transitions. Reduced-motion mode removes movement.
+- The manifesto keeps the original copy and scroll-reading behavior, but uses a shorter scroll runway, left-aligned editorial measure, tighter leading, and less empty space.
+- Pommy uses the user-supplied July 2026 full-page capture as the authoritative source. Versioned AVIF/WebP derivatives replace the displayed card and case-study images while all earlier originals remain preserved.
+- KirzKit appears in a small ruled Open Source / Developer Tools section, not in the main project grid. The row uses the portfolio's existing typography, neutral palette, and motion language.
+- GitHub and LinkedIn are confirmed profile links and appear consistently in every footer. The homepage Person structured data includes both in `sameAs`.

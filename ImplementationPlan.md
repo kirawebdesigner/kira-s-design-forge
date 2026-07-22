@@ -1,11 +1,45 @@
 # Implementation Plan
 
+## Manifesto Component Release
+
+- [x] Audit the supplied desktop screenshot and existing sticky read-along implementation.
+- [x] Define a compact two-column editorial component with a single-column mobile fallback.
+- [x] Implement semantic static HTML, scroll-driven transform/opacity emphasis, and reduced-motion behavior.
+- [x] Run responsive, accessibility, console, performance, and visual validation.
+- [ ] Commit the complete audited portfolio state, push `main`, and verify the DirectAdmin deployment.
+
+## Targeted Screenshot Redesign
+
+- [x] Audit the homepage manifesto and current homepage, work-index, and case-study screenshot containers.
+- [x] Define a targeted editorial evolution using the existing neutral palette, typography, and real screenshots.
+- [x] Add asymmetric desktop gallery rhythm and single-column mobile composition.
+- [x] Add consistent screenshot stages to homepage cards, work cards, case-study imagery, and full-page previews.
+- [x] Tighten the manifesto scroll runway and type measure without changing its content or accessibility behavior.
+- [x] Replace Pommy presentation assets with optimized derivatives from the supplied updated screenshot.
+- [x] Add KirzKit as a separate open-source/tooling feature with a direct GitHub link.
+- [x] Add verified GitHub and LinkedIn profile links to all route footers and homepage structured data.
+- [x] Run responsive, visual, interaction, accessibility, and performance regression validation.
+- [x] Record final evidence and exact working-tree status without deployment.
+
+## Current Production Optimization Pass
+
+- [x] Capture clean homepage browser and three-run Lighthouse baselines at 390px/mobile and 1440px/desktop.
+- [x] Capture before screenshots at 390, 768, 1440, and 1920 pixels for the homepage, work index, and five case studies.
+- [x] Generate responsive project-card and case-study image derivatives while retaining sources.
+- [x] Move restored content into static HTML and reduce the custom script to progressive enhancement.
+- [x] Remove obsolete Framer runtime and unused remote font declarations after route-by-route proof.
+- [x] Add responsive picture/srcset/sizes markup and explicit intrinsic dimensions.
+- [x] Fix hero first-paint behavior, manifesto batching, footer contrast, metadata, crawler files, structured data, cache policy, and security headers.
+- [x] Complete all-route browser, accessibility, SEO, performance, warm-cache, JavaScript-disabled, and visual-regression validation.
+- [x] Apply restrained design-taste polish to focus, selection, contact controls, and motion behavior without redesigning.
+- [x] Produce the final evidence-backed report. Do not deploy.
+
 ## Current Restoration Pass
 
 - [x] Restore the manifesto as a reversible scroll-progress read-along without rehydrating retired template content.
 - [x] Rebuild Services, Featured Projects, Builder Mindset, Capabilities, Contact, and Footer inside their existing section roots.
 - [x] Add Kirubel's supplied portrait to the original hero avatar component.
-- [x] Standardize all contact destinations on `contact@kiraweb.pro.et`.
+- [x] Standardize all contact destinations on `contact@kira.pro.et`.
 - [x] Synchronize the complete footer and accessible mobile menu across all nine retained routes.
 - [x] Integrate the supplied Zewijuna, Pommy, and Majestic full-page captures at their native proportions.
 - [x] Re-run visual screenshots, the 90-page responsive matrix, console/image/link/accessibility checks, menu keyboard behavior, form fallback, and reduced motion.

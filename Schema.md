@@ -47,6 +47,18 @@ This static portfolio has no runtime database. This document defines the content
 | project | relation | yes | Parent project |
 | privacyReviewed | boolean | yes | Must be true before use |
 | sourceNote | string | yes | Where/how it was captured |
+| variants | AssetVariant[] | yes | Responsive 480/768/1200 WebP/AVIF derivatives where applicable |
+| loadingPriority | enum | yes | `critical`, `near-fold`, or `deferred` |
+
+## AssetVariant
+
+| Field | Type | Required | Notes |
+|---|---|---:|---|
+| path | string | yes | Local derivative path |
+| format | enum | yes | `avif` or `webp` |
+| width | integer | yes | Intrinsic derivative width |
+| height | integer | yes | Intrinsic derivative height |
+| bytes | integer | yes | Verified file size |
 
 ## Approved Projects
 

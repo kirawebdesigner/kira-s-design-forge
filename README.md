@@ -28,4 +28,4 @@ The output is static and can be deployed to Netlify, Cloudflare Pages, GitHub Pa
 
 ## Contact
 
-`contact@kiraweb.pro.et`
+`contact@kira.pro.et`

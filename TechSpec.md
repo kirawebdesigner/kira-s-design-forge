@@ -62,7 +62,7 @@ Unverified facts must not appear. The user-supplied clinic dashboard screenshot 
 
 ## Contact
 
-- The confirmed portfolio address is `contact@kiraweb.pro.et`.
+- The confirmed portfolio address is `contact@kira.pro.et`.
 - The homepage contact form validates Name, Email, and Project / message, then opens a transparent prefilled `mailto:` draft. It does not claim backend submission.
 - Hide unconfirmed social and external profile links rather than inventing destinations.
 - Preserve the template's contact interaction and visual composition.
@@ -88,3 +88,14 @@ Unverified facts must not appear. The user-supplied clinic dashboard screenshot 
 ## Hosting
 
 The output remains host-agnostic static HTML. Production is currently published to `kiraweb.pro.et` by `.github/workflows/deploy.yml`: a push to `main` prepares the retained static files and uploads them to the existing DirectAdmin document root over FTP. Deployment was explicitly authorized on 2026-07-20.
+
+The manifesto component remains native HTML and CSS. Astryx is not installed because the repository has no React runtime or package configuration; adding it would violate the static architecture and increase the production payload.
+
+## Production Optimization Architecture
+
+- Keep the site as framework-free static HTML, CSS, and lightweight JavaScript.
+- Store responsive WebP/AVIF derivatives beside their source project images and retain original PNG/JPEG files as archival sources.
+- Render all content, footer, contact, and case-study evidence statically. JavaScript is limited to menu behavior, contact mailto preparation, manifesto read-along, and small progressive enhancements.
+- Self-host only the Archivo WOFF2 weights proven necessary by computed-style and network audits.
+- Add root `robots.txt`, `sitemap.xml`, and `.htaccess`; update the deployment copy list so DirectAdmin serves them directly.
+- Use HTML revalidation, long-lived cache headers only for stable asset filenames, and a conservative security-header baseline compatible with the static site.

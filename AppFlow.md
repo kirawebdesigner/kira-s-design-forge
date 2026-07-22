@@ -21,10 +21,11 @@ flowchart TD
 2. Hero positioning and concise introduction
 3. Selected product work
 4. Builder-focused biography
-5. Product and systems capabilities
-6. Technology context where it supports the story
-7. Contact call to action
-8. Footer with confirmed links only
+5. Open Source / Developer Tools with KirzKit
+6. Product and systems capabilities
+7. Technology context where it supports the story
+8. Contact call to action
+9. Footer with confirmed GitHub and LinkedIn links
 
 The exact section order may follow the existing template where doing so preserves its strongest pacing.
 
@@ -48,6 +49,8 @@ The exact section order may follow the existing template where doing so preserve
 - Only the five approved project routes appear in cards or project navigation.
 - Unconfirmed external links are hidden.
 - The mobile menu must retain the template's existing interaction quality.
+- Every route must expose the same complete content and navigation when JavaScript is disabled; JavaScript only enhances interaction.
+- Full-page screenshots remain exclusive to their case studies and load only near their evidence sections.
 
 ## Content Flow by Project
 
