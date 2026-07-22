@@ -48,9 +48,9 @@ Do not introduce:
 
 - Preserve Framer's existing page transitions, scroll behavior, hover states, and image scaling where they remain reliable.
 - Remove animation only if it is broken, inaccessible, or tied exclusively to removed template promotion.
-- The manifesto uses one accessible sentence plus assistive-technology-hidden phrase spans whose opacity follows reversible section scroll progress. It is not a one-time reveal.
+- The manifesto is a compact editorial product-approach component with a semantic heading, brief introduction, and four visible principles.
 - The mobile navigation uses a labeled modal overlay with keyboard open/close behavior, Escape support, focus trapping, and focus return.
-- Respect `prefers-reduced-motion`: all manifesto phrases and reveal content remain fully visible, and menu/reveal transitions are disabled.
+- Respect `prefers-reduced-motion`: all manifesto content remains fully visible, and menu/reveal transitions are disabled.
 - Homepage restoration content uses a short, non-blocking rise animation that remains readable from its first frame; reduced-motion mode removes it completely.
 
 ## Restored Homepage Systems
@@ -105,7 +105,8 @@ Check typography, navigation, menu, cards, image crops, buttons, contact section
 - Project names and descriptions remain below the images, never overlaid on product evidence.
 - Case-study images and full-page scroll previews use the same stage treatment so product evidence feels intentional across every route.
 - Hover movement is limited to a small lift and subtle image scale using transform and shadow transitions. Reduced-motion mode removes movement.
-- The manifesto keeps the original copy and scroll-reading behavior, but uses a shorter scroll runway, left-aligned editorial measure, tighter leading, and less empty space.
+- The manifesto uses a concise two-column editorial composition at desktop widths and a natural single-column reading order on mobile. Any enhancement uses only opacity and transform; all content remains readable without JavaScript or motion.
 - Pommy uses the user-supplied July 2026 full-page capture as the authoritative source. Versioned AVIF/WebP derivatives replace the displayed card and case-study images while all earlier originals remain preserved.
+- Majestic uses the latest user-supplied full-page capture for its case-study scroll preview. Responsive 640px and 1040px AVIF/WebP derivatives replace the displayed preview while the original remains archived and never loads on the homepage or work index.
 - KirzKit appears in a small ruled Open Source / Developer Tools section, not in the main project grid. The row uses the portfolio's existing typography, neutral palette, and motion language.
 - GitHub and LinkedIn are confirmed profile links and appear consistently in every footer. The homepage Person structured data includes both in `sameAs`.

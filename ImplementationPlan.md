@@ -1,5 +1,12 @@
 # Implementation Plan
 
+## Release Status
+
+- [x] Publish the validated optimization and manifesto release in commit `7756473` (DirectAdmin workflow `29879563587` succeeded).
+- [x] Refresh the Majestic full-page preview from the supplied capture with responsive AVIF/WebP derivatives and publish it in commit `20ca6ef` (workflow `29879956973` succeeded).
+- [x] Verify the live Majestic 1040px AVIF response matches the committed asset.
+- [ ] Require explicit user authorization before any future commit, push, or deployment.
+
 ## Manifesto Component Release
 
 - [x] Audit the supplied desktop screenshot and existing sticky read-along implementation.
@@ -19,7 +26,7 @@
 - [x] Add KirzKit as a separate open-source/tooling feature with a direct GitHub link.
 - [x] Add verified GitHub and LinkedIn profile links to all route footers and homepage structured data.
 - [x] Run responsive, visual, interaction, accessibility, and performance regression validation.
-- [x] Record final evidence and exact working-tree status without deployment.
+- [x] Record final evidence, exact working-tree status, and release verification.
 
 ## Current Production Optimization Pass
 
@@ -32,7 +39,7 @@
 - [x] Fix hero first-paint behavior, manifesto batching, footer contrast, metadata, crawler files, structured data, cache policy, and security headers.
 - [x] Complete all-route browser, accessibility, SEO, performance, warm-cache, JavaScript-disabled, and visual-regression validation.
 - [x] Apply restrained design-taste polish to focus, selection, contact controls, and motion behavior without redesigning.
-- [x] Produce the final evidence-backed report. Do not deploy.
+- [x] Produce the final evidence-backed report. Publish only when explicitly authorized.
 
 ## Current Restoration Pass
 

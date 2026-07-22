@@ -58,7 +58,7 @@ The homepage must quickly answer:
 - Do not fabricate metrics, testimonials, clients, awards, employment history, results, URLs, or screenshots.
 - Do not redesign from scratch or replace the site with a generic developer portfolio.
 - Do not add a blog unless retained content is genuinely useful and written for Kirubel.
-- Do not push to GitHub or alter a remote repository.
+- Releases require explicit user authorization and successful local validation. The authorized optimization and manifesto releases have already been published; future releases remain opt-in.
 
 ## Success Criteria
 
@@ -70,12 +70,20 @@ The homepage must quickly answer:
 - No material browser-console errors are introduced.
 - Available validation checks pass; unavailable checks are explicitly reported.
 
-## Manifesto Component Release
+## Manifesto Component Release — Completed
 
-- Replace the oversized single-paragraph manifesto with a compact, recruiter-readable product-approach component.
-- Preserve the portfolio's editorial monochrome identity while improving hierarchy, pacing, mobile readability, and reduced-motion behavior.
-- Keep the implementation framework-free; Astryx is used as a component-design reference because its React packages are incompatible with this static export.
-- Commit and publish the fully validated portfolio through the existing DirectAdmin deployment workflow.
+- Replaced the oversized single-paragraph manifesto with a compact, recruiter-readable product-approach component.
+- Preserved the portfolio's editorial monochrome identity while improving hierarchy, pacing, mobile readability, and reduced-motion behavior.
+- Kept the implementation framework-free; Astryx was a component-design reference because its React packages are incompatible with this static export.
+- Published the fully validated portfolio through the existing DirectAdmin deployment workflow in commit `7756473`.
+
+## Current Release State
+
+- Production canonical URL: `https://kiraweb.pro.et/`.
+- The five primary case studies remain Zewijuna, YourCloser, DMS, Pommy, and Majestic.
+- KirzKit is presented separately as an open-source/developer-tooling project, linked to `https://github.com/kirawebdesigner/KirzKit`.
+- Confirmed public contact and profile links are `contact@kira.pro.et`, `https://github.com/kirawebdesigner/`, and `https://www.linkedin.com/in/kirubel-daniel/`.
+- The Majestic full-page case-study preview was refreshed from the supplied capture and released in commit `20ca6ef`; responsive AVIF/WebP derivatives are used instead of the original PNG on the page.
 
 ## Production Optimization Pass
 

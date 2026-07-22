@@ -25,6 +25,8 @@ There is no `package.json`, source component tree, or build system. The static s
 - Add only minimal custom CSS or JavaScript when generated markup cannot support required content safely.
 - Use the shared `portfolio-restoration.css` and `portfolio-restoration.js` layer for the synchronized footer, accessible mobile menu, read-along behavior, contact flow, and export-specific visibility fixes.
 - Avoid introducing a new framework unless the static export proves impossible to maintain without breaking behavior.
+- The manifesto is a static semantic component with lightweight progressive enhancement; it does not depend on React, Motion, Framer, or Astryx.
+- Project media uses explicit dimensions and responsive AVIF/WebP `picture` sources. The Majestic full-page preview currently ships 640px and 1040px derivatives, with the original source retained outside the initial page request.
 
 ## Local Development
 
@@ -89,7 +91,7 @@ Unverified facts must not appear. The user-supplied clinic dashboard screenshot 
 
 The output remains host-agnostic static HTML. Production is currently published to `kiraweb.pro.et` by `.github/workflows/deploy.yml`: a push to `main` prepares the retained static files and uploads them to the existing DirectAdmin document root over FTP. Deployment was explicitly authorized on 2026-07-20.
 
-The manifesto component remains native HTML and CSS. Astryx is not installed because the repository has no React runtime or package configuration; adding it would violate the static architecture and increase the production payload.
+The manifesto component remains native HTML and CSS. Astryx is not installed because the repository has no React runtime or package configuration; adding it would violate the static architecture and increase the production payload. The optimization and manifesto release was published in `7756473` (successful workflow `29879563587`), and the Majestic screenshot refresh was published in `20ca6ef` (successful workflow `29879956973`). Future deployments still require explicit authorization.
 
 ## Production Optimization Architecture
 

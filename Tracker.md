@@ -2,11 +2,11 @@
 
 ## Current Sprint
 
-Manifesto component production release
+Post-release documentation and asset maintenance
 
 ## In Progress
 
-- No active implementation work. The manifesto release is live and verified.
+- No active implementation work. The optimization, manifesto, and Majestic preview releases are live and verified.
 
 ## To Do
 
@@ -15,6 +15,7 @@ Manifesto component production release
 ## Done
 
 - [x] Commit release `7756473`, push `main`, complete DirectAdmin workflow run `29879563587`, and pass the live four-viewport production audit
+- [x] Refresh Majestic's supplied full-page case-study capture with responsive AVIF/WebP variants; publish `20ca6ef` through successful DirectAdmin workflow `29879956973`
 - [x] Pass final manifesto Lighthouse medians: desktop 99 and mobile 82, with Accessibility, Best Practices, and SEO at 100
 - [x] Pass the four-viewport manifesto audit with zero overflow, console errors, failed requests, duplicate IDs, heading failures, or reduced-motion failures
 - [x] Replace the oversized manifesto paragraph with a compact semantic product-approach component.
@@ -74,7 +75,7 @@ Manifesto component production release
 
 - The supplied template video was available and used for hero and section-pacing comparison; no separate current-site comparison video was supplied.
 - The generated Framer CSS and some responsive wrapper markup remain because removing them would risk visual regressions; the remote React/Motion/Framer runtime and remote fonts are no longer requested.
-- Public social-profile URLs are not confirmed and therefore remain hidden.
+- GitHub and LinkedIn are confirmed and shown: `https://github.com/kirawebdesigner/` and `https://www.linkedin.com/in/kirubel-daniel/`.
 - DMS has no confirmed public deployment URL; its CTA remains an internal project overview.
 - Production publishing uses the existing `main` branch workflow. The optimized release was deployed successfully on 2026-07-22.
 - Hosting-level TTFB and CDN behavior require live infrastructure measurement and cannot be guaranteed by local repository changes alone.

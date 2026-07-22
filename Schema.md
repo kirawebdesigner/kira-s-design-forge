@@ -13,8 +13,8 @@ This static portfolio has no runtime database. This document defines the content
 | location | string | yes | Addis Ababa, Ethiopia |
 | shortBio | string | yes | Concise homepage biography |
 | longBio | string | yes | Builder-focused About content |
-| email | URL/string | no | Must be confirmed |
-| socialLinks | array | no | Confirmed URLs only |
+| email | URL/string | yes | `contact@kira.pro.et` |
+| socialLinks | array | no | Confirmed URLs only: GitHub and LinkedIn |
 
 ## Project
 
@@ -34,7 +34,7 @@ This static portfolio has no runtime database. This document defines the content
 | repositoryUrl | URL | no | Confirmed links only |
 | cardImage | Asset | yes | Real screenshot or documented placeholder |
 | galleryImages | Asset[] | yes | Real screenshots or documented placeholders |
-| screenshotSource | enum | yes | `captured`, `existing-real`, or `placeholder` |
+| screenshotSource | enum | yes | `captured`, `existing-real`, `user-supplied`, or `placeholder` |
 
 ## Asset
 
@@ -68,10 +68,27 @@ This static portfolio has no runtime database. This document defines the content
 4. `pommy`
 5. `majestic`
 
-No additional project record may be published during this scope.
+No additional primary case-study record may be published during this scope.
+
+## OpenSourceTool
+
+| Field | Type | Required | Notes |
+|---|---|---:|---|
+| name | string | yes | Verified project name |
+| category | enum | yes | `open-source` or `developer-tools` |
+| repositoryUrl | URL | yes | Confirmed GitHub URL |
+| summary | string | yes | Factual concise description |
+| featured | boolean | yes | Controls the separate tooling section |
+
+KirzKit is the current OpenSourceTool record. It links to `https://github.com/kirawebdesigner/KirzKit` and remains separate from the five primary case studies.
 
 ## Relationships
 
 - One Person has many Projects.
 - One Project has one card image and many gallery images.
 - Navigation and related-project blocks may reference only approved Projects.
+- The Open Source / Developer Tools section may reference OpenSourceTool records but must not add them to project navigation or the main case-study count.
+
+## Current Responsive Asset Notes
+
+The Majestic full-page case-study preview uses responsive `website-fullpage-preview-640` and `website-fullpage-preview-1040` AVIF/WebP variants. The original user-supplied PNG is retained as source material and is not requested during initial navigation.

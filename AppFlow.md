@@ -4,7 +4,8 @@
 
 ```mermaid
 flowchart TD
-    A["Homepage hero: Kirubel + product-builder positioning"] --> B["Selected work"]
+    A["Homepage hero: Kirubel + product-builder positioning"] --> M["Manifesto / product approach"]
+    M --> B["Selected work"]
     B --> C["Project case study"]
     C --> D["Problem / purpose"]
     D --> E["Product flows and responsibilities"]
@@ -19,13 +20,14 @@ flowchart TD
 
 1. Navigation
 2. Hero positioning and concise introduction
-3. Selected product work
-4. Builder-focused biography
-5. Open Source / Developer Tools with KirzKit
-6. Product and systems capabilities
-7. Technology context where it supports the story
-8. Contact call to action
-9. Footer with confirmed GitHub and LinkedIn links
+3. Manifesto / product approach
+4. Selected product work
+5. Builder-focused biography
+6. Open Source / Developer Tools with KirzKit
+7. Product and systems capabilities
+8. Technology context where it supports the story
+9. Contact call to action
+10. Footer with confirmed GitHub and LinkedIn links
 
 The exact section order may follow the existing template where doing so preserves its strongest pacing.
 
@@ -68,11 +70,15 @@ Dental management and clinic operations system; Admin, Reception, and Doctor wor
 
 ### Pommy
 
-Content and flow remain provisional until the real local project is inspected.
+Restaurant-commerce case study with a supplied responsive visual, menu-discovery focus, and a route to selected work or contact.
 
 ### Majestic
 
-Content and flow remain provisional until real project sources or deployments are located and inspected.
+Corporate website case study with a responsive full-page visual preview. The current preview is generated from the supplied capture and loads only in the case study.
+
+### KirzKit
+
+Separate open-source/developer-tools mention linking to its GitHub repository. It is intentionally not part of the five-case-study project sequence.
 
 ### DMS visual clarification
 

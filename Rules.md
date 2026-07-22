@@ -30,7 +30,7 @@
 - Synchronize repeated global content across all retained pages.
 - Use local relative paths for new portfolio assets.
 - Do not add dependencies without a clear need.
-- Do not initialize, push, or modify a Git remote without explicit instruction.
+- Do not initialize, commit, push, or modify a Git remote without explicit user instruction.
 - Do not delete surplus pages until inbound and outbound links have been remapped.
 
 ## Error Handling
@@ -62,5 +62,5 @@
 - Primary content and the hero H1 must remain complete and readable without JavaScript, remote fonts, or animation.
 - Remove Framer runtime code only after every route passes visual and interaction regression checks.
 - Do not apply immutable caching to HTML or non-versioned files without a revalidation strategy.
-- Do not initialize Git or migrate to React. The manifesto release is authorized for commit, push, and deployment after local validation passes.
+- Do not initialize Git or migrate to React. The completed optimization/manifesto and Majestic releases were explicitly authorized; all future commits, pushes, and deployments require a new explicit user instruction after local validation passes.
 - Do not install Astryx into this static export; apply compatible component principles with native HTML and CSS.
