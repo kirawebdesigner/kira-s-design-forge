@@ -6,8 +6,7 @@ Manifesto component production release
 
 ## In Progress
 
-- [x] Validate the redesigned manifesto component across desktop, tablet, mobile, reduced motion, and production performance.
-- [ ] Commit, push, and verify the authorized production deployment.
+- No active implementation work. The manifesto release is live and verified.
 
 ## To Do
 
@@ -15,6 +14,7 @@ Manifesto component production release
 
 ## Done
 
+- [x] Commit release `7756473`, push `main`, complete DirectAdmin workflow run `29879563587`, and pass the live four-viewport production audit
 - [x] Pass final manifesto Lighthouse medians: desktop 99 and mobile 82, with Accessibility, Best Practices, and SEO at 100
 - [x] Pass the four-viewport manifesto audit with zero overflow, console errors, failed requests, duplicate IDs, heading failures, or reduced-motion failures
 - [x] Replace the oversized manifesto paragraph with a compact semantic product-approach component.
@@ -76,5 +76,5 @@ Manifesto component production release
 - The generated Framer CSS and some responsive wrapper markup remain because removing them would risk visual regressions; the remote React/Motion/Framer runtime and remote fonts are no longer requested.
 - Public social-profile URLs are not confirmed and therefore remain hidden.
 - DMS has no confirmed public deployment URL; its CTA remains an internal project overview.
-- Production publishing uses the existing `main` branch workflow. This optimization pass was not committed, pushed, or deployed.
+- Production publishing uses the existing `main` branch workflow. The optimized release was deployed successfully on 2026-07-22.
 - Hosting-level TTFB and CDN behavior require live infrastructure measurement and cannot be guaranteed by local repository changes alone.

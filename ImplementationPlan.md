@@ -6,7 +6,7 @@
 - [x] Define a compact two-column editorial component with a single-column mobile fallback.
 - [x] Implement semantic static HTML, scroll-driven transform/opacity emphasis, and reduced-motion behavior.
 - [x] Run responsive, accessibility, console, performance, and visual validation.
-- [ ] Commit the complete audited portfolio state, push `main`, and verify the DirectAdmin deployment.
+- [x] Commit the complete audited portfolio state, push `main`, and verify the DirectAdmin deployment.
 
 ## Targeted Screenshot Redesign
 
