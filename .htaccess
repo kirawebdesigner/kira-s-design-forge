@@ -1,5 +1,5 @@
 Options -Indexes
-# DirectAdmin/LiteSpeed public document-root defaults.
+# DirectAdmin/LiteSpeed public document-root defaults; account reactivated 2026-07-28.
 DirectoryIndex index.html
 
 <IfModule mod_authz_core.c>
