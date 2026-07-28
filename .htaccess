@@ -1,4 +1,5 @@
 Options -Indexes
+# DirectAdmin/LiteSpeed public document-root defaults.
 DirectoryIndex index.html
 
 <IfModule mod_authz_core.c>
