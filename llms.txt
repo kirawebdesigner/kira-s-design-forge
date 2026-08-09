@@ -16,6 +16,13 @@ Contact: contact@kira.pro.et
 - [Web application development](https://kiraweb.pro.et/services/web-application-development/): Product structure, responsive frontend, backend, databases, deployment, and QA.
 - [SaaS product development](https://kiraweb.pro.et/services/saas-product-development/): Multi-tenant products, subscriptions, permissions, administration, and backend systems.
 - [Business automation](https://kiraweb.pro.et/services/business-automation/): Operational workflows, integrations, approvals, notifications, and data movement.
+- [Mobile application development](https://kiraweb.pro.et/services/mobile-applications/): Mobile product flows, interfaces, connected backends, testing, and release readiness.
+- [Internal management systems](https://kiraweb.pro.et/services/internal-management-systems/): Operational records, staff roles, approvals, reporting, and controlled workflows.
+- [Realtime product experiences](https://kiraweb.pro.et/services/realtime-product-experiences/): Live updates, notifications, synchronized data, and resilient user feedback.
+- [Backend API development](https://kiraweb.pro.et/services/backend-api-development/): Product logic, validation, permissions, integrations, and production reliability.
+- [Database architecture](https://kiraweb.pro.et/services/database-architecture/): Data models, relationships, constraints, access patterns, and migrations.
+- [Authentication and permissions](https://kiraweb.pro.et/services/authentication-permissions/): Identity, roles, authorization, sessions, and tenant boundaries.
+- [Deployment and production QA](https://kiraweb.pro.et/services/deployment-production-qa/): Hosting configuration, security, performance, accessibility, and release validation.
 
 ## Selected case studies
 

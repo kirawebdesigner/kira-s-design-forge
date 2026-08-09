@@ -37,6 +37,8 @@ Do not introduce:
 ## Service Pages
 
 Service routes use the same warm neutral canvas, black editorial type, restrained blue focus color, oversized headings, fine rules, pill actions, and responsive spacing as the portfolio. They remain content-first and avoid generic landing-page card stacks.
+
+Homepage capability links use black text in default, visited, hover, and active states. Blue is reserved only for the accessible keyboard focus outline.
 - Excessive glassmorphism
 - Repetitive glowing borders
 - A generic rounded-card/bento system

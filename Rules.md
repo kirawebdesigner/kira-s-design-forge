@@ -10,6 +10,7 @@
 - Write concise, specific, human copy focused on products, systems, and operational software.
 - Avoid generic portfolio filler and unsupported claims.
 - Service pages must solve a distinct visitor question, link to relevant project evidence, and avoid location or keyword doorway-page patterns.
+- Every homepage capability must link to exactly one canonical service route and retain the portfolio's black link treatment in every interaction state.
 - Keep metadata unique and structured data consistent with visible page content.
 
 ## Evidence Rules

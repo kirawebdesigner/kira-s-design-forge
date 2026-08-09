@@ -25,6 +25,9 @@
 - [x] Connect service pages from homepage capabilities, related case studies, sitemap, and `llms.txt`.
 - [x] Run all-route metadata, structured-data, responsive, accessibility, image, and link validation.
 - [x] Replace the contact form's `mailto:` submission with validated same-origin server delivery.
+- [x] Expand the service set so every homepage capability has a unique destination.
+- [x] Remove browser-default blue and underline states from all capability links.
+- [x] Validate all ten service routes and linked capability states across responsive viewports.
 
 ## Release Status
 

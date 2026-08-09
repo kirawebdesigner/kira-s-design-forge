@@ -33,7 +33,7 @@ The homepage must quickly answer:
 
 ## MVP Scope
 
-- Dedicated, people-first service pages for web application development, SaaS product development, and business automation.
+- Dedicated, people-first pages for all ten capabilities shown on the homepage.
 - Unique titles, descriptions, canonicals, OpenGraph metadata, and accurate structured data across every indexable route.
 - Visible internal links from homepage capabilities to each service page.
 

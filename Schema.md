@@ -44,6 +44,8 @@ This static portfolio has no runtime database. This document defines the content
 | deliverables | string[] | yes | Practical work included in the service |
 | evidenceProjects | Project[] | yes | Existing case studies supporting the service |
 | canonicalUrl | URL | yes | Absolute production URL |
+
+All ten homepage capabilities map one-to-one to a canonical service route.
 | galleryImages | Asset[] | yes | Real screenshots or documented placeholders |
 | screenshotSource | enum | yes | `captured`, `existing-real`, `user-supplied`, or `placeholder` |
 
