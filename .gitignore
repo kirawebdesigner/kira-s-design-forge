@@ -9,3 +9,7 @@ Thumbs.db
 # Local editor settings
 .vscode/
 .idea/
+
+# Deployment-generated SMTP credentials
+.contact-config.php
+_site/

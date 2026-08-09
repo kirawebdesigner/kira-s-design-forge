@@ -14,10 +14,18 @@ jobs:
 
       - name: Prepare static site
         shell: bash
+        env:
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
+          SMTP_APP_PASSWORD: ${{ secrets.SMTP_APP_PASSWORD }}
         run: |
+          test -n "$SMTP_USERNAME"
+          test -n "$SMTP_APP_PASSWORD"
           mkdir -p _site
           cp index.html 404.html contact.php robots.txt llms.txt sitemap.xml .htaccess _site/
           cp -R 404 assets services work _site/
+          SMTP_USERNAME_B64="$(printf '%s' "$SMTP_USERNAME" | base64 -w 0)"
+          SMTP_APP_PASSWORD_B64="$(printf '%s' "$SMTP_APP_PASSWORD" | base64 -w 0)"
+          printf '%s\n' '<?php' "return ['username' => base64_decode('$SMTP_USERNAME_B64'), 'app_password' => base64_decode('$SMTP_APP_PASSWORD_B64')];" > _site/.contact-config.php
 
       - name: Publish static site via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

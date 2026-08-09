@@ -254,7 +254,7 @@ $schema = [
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title><?= $escape($service['title']) ?></title><meta name="description" content="<?= $escape($service['description']) ?>"><meta name="robots" content="index, follow, max-image-preview:large"><meta name="theme-color" content="#faf7f3">
-<link rel="canonical" href="<?= $canonical ?>"><link rel="icon" href="/assets/kirubel-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/service-pages.css">
+<link rel="canonical" href="<?= $canonical ?>"><link rel="icon" href="/assets/kirubel-mark.svg" type="image/svg+xml"><link rel="stylesheet" href="/assets/service-pages.css?v=20260809-2">
 <meta property="og:type" content="website"><meta property="og:url" content="<?= $canonical ?>"><meta property="og:title" content="<?= $escape($service['name']) ?> | Kirubel Daniel"><meta property="og:description" content="<?= $escape($service['description']) ?>"><meta property="og:image" content="<?= $service['ogImage'] ?>"><meta property="og:image:alt" content="<?= $escape($service['name']) ?> by Kirubel Daniel">
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="<?= $escape($service['name']) ?> | Kirubel Daniel"><meta name="twitter:description" content="<?= $escape($service['description']) ?>"><meta name="twitter:image" content="<?= $service['ogImage'] ?>">
 <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
