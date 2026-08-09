@@ -75,7 +75,7 @@
 - [x] Restore the manifesto as a reversible scroll-progress read-along without rehydrating retired template content.
 - [x] Rebuild Services, Featured Projects, Builder Mindset, Capabilities, Contact, and Footer inside their existing section roots.
 - [x] Add Kirubel's supplied portrait to the original hero avatar component.
-- [x] Standardize all contact destinations on `contact@kira.pro.et`.
+- [x] Standardize all contact destinations on `contact@kiraweb.pro.et`.
 - [x] Synchronize the complete footer and accessible mobile menu across all nine retained routes.
 - [x] Integrate the supplied Zewijuna, Pommy, and Majestic full-page captures at their native proportions.
 - [x] Re-run visual screenshots, the 90-page responsive matrix, console/image/link/accessibility checks, menu keyboard behavior, form fallback, and reduced motion.

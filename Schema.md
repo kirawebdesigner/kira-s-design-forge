@@ -13,7 +13,7 @@ This static portfolio has no runtime database. This document defines the content
 | location | string | yes | Addis Ababa, Ethiopia |
 | shortBio | string | yes | Concise homepage biography |
 | longBio | string | yes | Builder-focused About content |
-| email | URL/string | yes | `contact@kira.pro.et` |
+| email | URL/string | yes | `contact@kiraweb.pro.et` |
 | socialLinks | array | no | Confirmed URLs only: GitHub and LinkedIn |
 
 ## Project

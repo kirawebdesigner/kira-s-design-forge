@@ -78,7 +78,7 @@ Unverified facts must not appear. The user-supplied clinic dashboard screenshot 
 
 ## Contact
 
-- The confirmed portfolio address is `contact@kira.pro.et`.
+- The confirmed portfolio address is `contact@kiraweb.pro.et`.
 - The homepage contact form validates Name, Email, and Project / message, then opens a transparent prefilled `mailto:` draft. It does not claim backend submission.
 - Hide unconfirmed social and external profile links rather than inventing destinations.
 - Preserve the template's contact interaction and visual composition.

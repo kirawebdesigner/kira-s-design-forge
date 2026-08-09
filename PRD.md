@@ -88,7 +88,7 @@ The homepage must quickly answer:
 - The six primary case studies are Zewijuna, YourCloser, DMS, Pommy, Majestic, and KiraEstate.
 - KiraEstate is documented as a live real-estate discovery and inquiry concept. Sample listings, prices, contact details, people, and property counts are not presented as verified commercial inventory or outcomes.
 - KirzKit is presented separately as an open-source/developer-tooling project, linked to `https://github.com/kirawebdesigner/KirzKit`.
-- Confirmed public contact and profile links are `contact@kira.pro.et`, `https://github.com/kirawebdesigner/`, and `https://www.linkedin.com/in/kirubel-daniel/`.
+- Confirmed public contact and profile links are `contact@kiraweb.pro.et`, `https://github.com/kirawebdesigner/`, and `https://www.linkedin.com/in/kirubel-daniel/`.
 - The Majestic full-page case-study preview was refreshed from the supplied capture and released in commit `20ca6ef`; responsive AVIF/WebP derivatives are used instead of the original PNG on the page.
 
 ## Production Optimization Pass

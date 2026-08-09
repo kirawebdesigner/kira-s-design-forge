@@ -3,7 +3,7 @@
 > Kirubel Daniel is a full-stack product builder and digital systems developer based in Addis Ababa, Ethiopia. He builds web applications, mobile products, SaaS systems, business automation, and operational software.
 
 Canonical website: https://kiraweb.pro.et/
-Contact: contact@kira.pro.et
+Contact: contact@kiraweb.pro.et
 
 ## Primary pages
 

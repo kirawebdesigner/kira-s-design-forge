@@ -55,7 +55,7 @@ Complete ten-page service set and capability-link styling
 - [x] Restore six service rows and five homepage project cards
 - [x] Replace broken Builder Mindset thumbnails with four readable principle cards
 - [x] Restore ten capability rows, contact form, and rich footer
-- [x] Replace all portfolio contact email references with `contact@kira.pro.et`
+- [x] Replace all portfolio contact email references with `contact@kiraweb.pro.et`
 - [x] Add Kirubel's supplied portrait to the original hero avatar component
 - [x] Confirm retired template residue scan returns zero results
 - [x] Complete the final full responsive and browser QA rerun after restoration

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-const CONTACT_EMAILS = ['contact@kira.pro.et', 'kirubeldaniel01@gmail.com'];
+const CONTACT_EMAILS = ['contact@kiraweb.pro.et', 'kirubeldaniel01@gmail.com'];
 const MAX_NAME_LENGTH = 100;
 const MAX_EMAIL_LENGTH = 254;
 const MAX_MESSAGE_LENGTH = 5000;
@@ -135,7 +135,7 @@ try {
     sendAuthenticatedEmail($subject, $body, $email);
 } catch (Throwable $error) {
     error_log('Portfolio contact SMTP failure: ' . $error->getMessage());
-    respond(503, 'The message could not be sent right now. Please email contact@kira.pro.et directly.');
+    respond(503, 'The message could not be sent right now. Please email contact@kiraweb.pro.et directly.');
 }
 
 respond(200, 'Thanks. Your message was sent to Kirubel.');

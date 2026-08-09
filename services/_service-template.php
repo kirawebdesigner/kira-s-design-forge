@@ -28,7 +28,7 @@ $services = [
         'faqs' => [
             ['Can the mobile app share a backend with a web product?', 'Yes. Shared APIs, authentication, permissions, and data models can support both interfaces when the product requires them.'],
             ['Can you help define the first release?', 'Yes. The work can begin with the smallest mobile journey that proves the core product value.'],
-            ['How do we start?', 'Send the product idea, intended users, target devices, current stage, and required outcome to contact@kira.pro.et.']
+            ['How do we start?', 'Send the product idea, intended users, target devices, current stage, and required outcome to contact@kiraweb.pro.et.']
         ],
         'subject' => 'Mobile application project',
         'ogImage' => 'https://kiraweb.pro.et/assets/projects/zewijuna/website-card-1200.webp'
@@ -59,7 +59,7 @@ $services = [
         'faqs' => [
             ['Can the system support different staff roles?', 'Yes. Roles and permissions are designed around actual responsibilities and the data each person should access.'],
             ['Can existing records be considered?', 'Yes. The discovery phase can map current spreadsheets, databases, and operational data before a migration approach is chosen.'],
-            ['How do we start?', 'Send the current process, users, records, pain points, and required outcome to contact@kira.pro.et.']
+            ['How do we start?', 'Send the current process, users, records, pain points, and required outcome to contact@kiraweb.pro.et.']
         ],
         'subject' => 'Internal management system project',
         'ogImage' => 'https://kiraweb.pro.et/assets/projects/dms/dashboard-card-1200.webp'
@@ -90,7 +90,7 @@ $services = [
         'faqs' => [
             ['Does every update need to be realtime?', 'No. Realtime delivery is used only where current state materially improves the workflow. Other data can use simpler request and refresh patterns.'],
             ['What happens when the connection fails?', 'The product should communicate stale or disconnected state, retry safely, and recover without duplicating important actions.'],
-            ['How do we start?', 'Send the events, users, timing expectations, current stack, and required outcome to contact@kira.pro.et.']
+            ['How do we start?', 'Send the events, users, timing expectations, current stack, and required outcome to contact@kiraweb.pro.et.']
         ],
         'subject' => 'Realtime product project',
         'ogImage' => 'https://kiraweb.pro.et/assets/projects/zewijuna/website-card-1200.webp'
@@ -121,7 +121,7 @@ $services = [
         'faqs' => [
             ['Can the API support both web and mobile clients?', 'Yes. A shared product API can serve multiple clients while keeping validation and permissions consistent.'],
             ['Can you integrate an existing external service?', 'Yes. The work can include API clients, webhooks, authentication, mapping, retries, and observable failure handling.'],
-            ['How do we start?', 'Send the product flow, clients, data sources, required integrations, and current technical constraints to contact@kira.pro.et.']
+            ['How do we start?', 'Send the product flow, clients, data sources, required integrations, and current technical constraints to contact@kiraweb.pro.et.']
         ],
         'subject' => 'Backend API project',
         'ogImage' => 'https://kiraweb.pro.et/assets/projects/yourcloser/home-card-1200.webp'
@@ -152,7 +152,7 @@ $services = [
         'faqs' => [
             ['Can you improve an existing schema?', 'Yes. The current data, constraints, queries, migrations, and application dependencies are reviewed before changes are proposed.'],
             ['Do you consider permissions in database design?', 'Yes. Ownership and access boundaries are part of the model, especially for multi-tenant and operational systems.'],
-            ['How do we start?', 'Send the product model, current schema if one exists, key queries, pain points, and required outcome to contact@kira.pro.et.']
+            ['How do we start?', 'Send the product model, current schema if one exists, key queries, pain points, and required outcome to contact@kiraweb.pro.et.']
         ],
         'subject' => 'Database architecture project',
         'ogImage' => 'https://kiraweb.pro.et/assets/projects/dms/dashboard-card-1200.webp'
@@ -183,7 +183,7 @@ $services = [
         'faqs' => [
             ['What is the difference between authentication and authorization?', 'Authentication confirms who a user is. Authorization determines which resources and actions that user can access.'],
             ['Can permissions vary by organization or tenant?', 'Yes. Membership, roles, ownership, and organization boundaries can be represented explicitly in the access model.'],
-            ['How do we start?', 'Send the user types, protected resources, required actions, current authentication state, and security constraints to contact@kira.pro.et.']
+            ['How do we start?', 'Send the user types, protected resources, required actions, current authentication state, and security constraints to contact@kiraweb.pro.et.']
         ],
         'subject' => 'Authentication and permissions project',
         'ogImage' => 'https://kiraweb.pro.et/assets/projects/yourcloser/home-card-1200.webp'
@@ -214,7 +214,7 @@ $services = [
         'faqs' => [
             ['Can you audit an already deployed site?', 'Yes. The live routes, headers, assets, forms, responsive behavior, accessibility, performance, and search configuration can be checked directly.'],
             ['Can you fix deployment configuration?', 'Yes, when the hosting platform and required access are available. Infrastructure limits that cannot be changed in the repository are documented clearly.'],
-            ['How do we start?', 'Send the repository, deployment URL, hosting platform, known issues, and release goal to contact@kira.pro.et.']
+            ['How do we start?', 'Send the repository, deployment URL, hosting platform, known issues, and release goal to contact@kiraweb.pro.et.']
         ],
         'subject' => 'Deployment and production QA project',
         'ogImage' => 'https://kiraweb.pro.et/assets/projects/majestic/hero-card-1200.webp'
@@ -259,8 +259,8 @@ $schema = [
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="<?= $escape($service['name']) ?> | Kirubel Daniel"><meta name="twitter:description" content="<?= $escape($service['description']) ?>"><meta name="twitter:image" content="<?= $service['ogImage'] ?>">
 <script type="application/ld+json"><?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 </head><body><a class="skip" href="#content">Skip to content</a><header class="main-header"><div class="main-header__bar"><a class="brand" href="/" aria-label="Kirubel Daniel home">Kirubel</a><nav aria-label="Primary"><a href="/">Home</a><a href="/work/">Work</a><a href="/#contact">Contact</a></nav></div></header>
-<main id="content"><section class="hero"><div class="shell"><p class="eyebrow"><?= $escape($service['eyebrow']) ?></p><h1><?= $escape($service['headline']) ?></h1><p class="lede"><?= $escape($service['lede']) ?></p><div class="actions"><a class="button button--dark" href="mailto:contact@kira.pro.et?subject=<?= rawurlencode($service['subject']) ?>">Discuss this service</a><a class="button" href="/work/">View selected work</a></div></div></section>
+<main id="content"><section class="hero"><div class="shell"><p class="eyebrow"><?= $escape($service['eyebrow']) ?></p><h1><?= $escape($service['headline']) ?></h1><p class="lede"><?= $escape($service['lede']) ?></p><div class="actions"><a class="button button--dark" href="mailto:contact@kiraweb.pro.et?subject=<?= rawurlencode($service['subject']) ?>">Discuss this service</a><a class="button" href="/work/">View selected work</a></div></div></section>
 <section class="section"><div class="shell section-grid"><p class="kicker">What the service covers</p><div><h2><?= $escape($service['sectionTitle']) ?></h2><div class="body-copy"><?php foreach ($service['paragraphs'] as $paragraph): ?><p><?= $escape($paragraph) ?></p><?php endforeach; ?></div><div class="deliverables"><?php foreach ($service['deliverables'] as [$title, $copy]): ?><div class="deliverable"><strong><?= $escape($title) ?></strong><span><?= $escape($copy) ?></span></div><?php endforeach; ?></div></div></div></section>
 <section class="section"><div class="shell section-grid"><p class="kicker">Relevant work</p><div><h2>Evidence from connected product work.</h2><div class="evidence"><?php foreach ($service['evidence'] as [$url, $label, $name]): ?><a href="<?= $url ?>"><span><?= $escape($label) ?></span><strong><?= $escape($name) ?> ↗</strong></a><?php endforeach; ?></div></div></div></section>
 <section class="section"><div class="shell section-grid"><p class="kicker">Questions</p><div><h2><?= $escape($service['questionTitle']) ?></h2><div class="faq"><?php foreach ($service['faqs'] as [$question, $answer]): ?><details><summary><?= $escape($question) ?></summary><p><?= $escape($answer) ?></p></details><?php endforeach; ?></div></div></div></section></main>
-<section class="cta"><div class="shell cta-grid"><div><p class="kicker">Start a conversation</p><h2>Have a product or system to improve?</h2></div><a class="button" href="mailto:contact@kira.pro.et?subject=<?= rawurlencode($service['subject']) ?>">contact@kira.pro.et</a></div></section><footer><div class="shell footer-row"><span>© 2026 Kirubel Daniel</span><span>Full-Stack Product Builder, Addis Ababa</span></div></footer></body></html>
+<section class="cta"><div class="shell cta-grid"><div><p class="kicker">Start a conversation</p><h2>Have a product or system to improve?</h2></div><a class="button" href="mailto:contact@kiraweb.pro.et?subject=<?= rawurlencode($service['subject']) ?>">contact@kiraweb.pro.et</a></div></section><footer><div class="shell footer-row"><span>© 2026 Kirubel Daniel</span><span>Full-Stack Product Builder, Addis Ababa</span></div></footer></body></html>
