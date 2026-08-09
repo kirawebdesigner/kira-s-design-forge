@@ -101,5 +101,5 @@ The manifesto component remains native HTML and CSS. Astryx is not installed bec
 - Store responsive WebP/AVIF derivatives beside their source project images and retain original PNG/JPEG files as archival sources.
 - Render all content, footer, contact, and case-study evidence statically. JavaScript is limited to menu behavior, contact mailto preparation, manifesto read-along, and small progressive enhancements.
 - Self-host only the Archivo WOFF2 weights proven necessary by computed-style and network audits.
-- Add root `robots.txt`, `sitemap.xml`, and `.htaccess`; update the deployment copy list so DirectAdmin serves them directly.
+- Keep root `robots.txt`, `llms.txt`, `sitemap.xml`, and `.htaccess` in the deployment copy list so DirectAdmin serves them directly. `llms.txt` is an optional source map; canonical HTML, JSON-LD, and the XML sitemap remain authoritative.
 - Use HTML revalidation, long-lived cache headers only for stable asset filenames, and a conservative security-header baseline compatible with the static site.

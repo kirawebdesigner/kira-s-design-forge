@@ -11,6 +11,13 @@
 - [x] Revalidate the root `robots.txt` contents and sitemap reference.
 - [ ] Publish only after explicit user authorization.
 
+## Entity SEO and AI Discovery
+
+- [x] Keep homepage `Person` and `WebSite` structured data aligned with visible, verified facts.
+- [x] Explicitly allow major search and AI crawlers while retaining the canonical sitemap.
+- [x] Add a concise `llms.txt` source map and include it in the static deployment workflow.
+- [x] Validate robots syntax, JSON-LD, sitemap references, identity links, and deployment copying.
+
 ## Release Status
 
 - [x] Publish the validated optimization and manifesto release in commit `7756473` (DirectAdmin workflow `29879563587` succeeded).

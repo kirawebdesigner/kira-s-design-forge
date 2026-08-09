@@ -20,6 +20,7 @@ KiraEstate portfolio integration
 - [x] Validate the KiraEstate cards and case-study route at 390, 768, 1440, and 1920 pixels, including JavaScript-disabled rendering
 - [x] Replace both static 404 entry points with the accessible editorial recovery page and configure `ErrorDocument 404 /404.html`
 - [x] Confirm `robots.txt` is valid plain-text syntax and references the canonical sitemap
+- [x] Add explicit AI crawler access, verified entity fields, and a conservative `llms.txt` source map
 
 - [x] Commit release `7756473`, push `main`, complete DirectAdmin workflow run `29879563587`, and pass the live four-viewport production audit
 - [x] Refresh Majestic's supplied full-page case-study capture with responsive AVIF/WebP variants; publish `20ca6ef` through successful DirectAdmin workflow `29879956973`
