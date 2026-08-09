@@ -22,7 +22,7 @@ jobs:
           test -n "$SMTP_APP_PASSWORD"
           mkdir -p _site
           cp index.html 404.html contact.php robots.txt llms.txt sitemap.xml .htaccess _site/
-          cp -R 404 assets services work _site/
+          cp -R 404 BW assets services work _site/
           SMTP_USERNAME_B64="$(printf '%s' "$SMTP_USERNAME" | base64 -w 0)"
           SMTP_APP_PASSWORD_B64="$(printf '%s' "$SMTP_APP_PASSWORD" | base64 -w 0)"
           printf '%s\n' '<?php' "return ['username' => base64_decode('$SMTP_USERNAME_B64'), 'app_password' => base64_decode('$SMTP_APP_PASSWORD_B64')];" > _site/contact-config.php

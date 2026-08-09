@@ -52,6 +52,7 @@ There is no `package.json`, source component tree, or build system. The static s
 Target public routes:
 
 - `/` — homepage
+- `/BW` — temporary redirect to Kirubel Daniel's Ye-Buna product page
 - `/work/` — all approved work
 - `/work/zewijuna/`
 - `/work/yourcloser/`

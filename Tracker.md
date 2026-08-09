@@ -87,6 +87,8 @@ Complete ten-page service set and capability-link styling
 
 ## Known Issues and Blockers
 
+- [x] Add `/BW` as a temporary redirect to the supplied Ye-Buna product URL and include its static fallback in deployment
+
 - The supplied template video was available and used for hero and section-pacing comparison; no separate current-site comparison video was supplied.
 - The generated Framer CSS and some responsive wrapper markup remain because removing them would risk visual regressions; the remote React/Motion/Framer runtime and remote fonts are no longer requested.
 - GitHub and LinkedIn are confirmed and shown: `https://github.com/kirawebdesigner/` and `https://www.linkedin.com/in/kirubel-daniel/`.

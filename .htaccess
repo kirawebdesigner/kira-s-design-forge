@@ -3,6 +3,9 @@ Options -Indexes
 DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
 
+# Short link for the Ye-Buna product page. Keep temporary so the destination can change safely.
+RedirectMatch 302 ^/BW/?$ https://ye-buna.com/kirubeldaniel?ref=product_detail&product=6a78ec5aa6176_kirubeldaniel
+
 <Files "contact-config.php">
   Require all denied
 </Files>
