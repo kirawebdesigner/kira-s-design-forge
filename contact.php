@@ -49,7 +49,7 @@ function smtpCommand($socket, string $command, array $expectedCodes): string
 
 function sendAuthenticatedEmail(string $subject, string $body, string $replyTo): void
 {
-    $configPath = __DIR__ . '/.contact-config.php';
+    $configPath = __DIR__ . '/contact-config.php';
     if (!is_file($configPath)) {
         throw new RuntimeException('SMTP configuration is unavailable.');
     }

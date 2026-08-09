@@ -25,7 +25,7 @@ jobs:
           cp -R 404 assets services work _site/
           SMTP_USERNAME_B64="$(printf '%s' "$SMTP_USERNAME" | base64 -w 0)"
           SMTP_APP_PASSWORD_B64="$(printf '%s' "$SMTP_APP_PASSWORD" | base64 -w 0)"
-          printf '%s\n' '<?php' "return ['username' => base64_decode('$SMTP_USERNAME_B64'), 'app_password' => base64_decode('$SMTP_APP_PASSWORD_B64')];" > _site/.contact-config.php
+          printf '%s\n' '<?php' "return ['username' => base64_decode('$SMTP_USERNAME_B64'), 'app_password' => base64_decode('$SMTP_APP_PASSWORD_B64')];" > _site/contact-config.php
 
       - name: Publish static site via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4

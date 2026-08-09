@@ -11,5 +11,5 @@ Thumbs.db
 .idea/
 
 # Deployment-generated SMTP credentials
-.contact-config.php
+contact-config.php
 _site/

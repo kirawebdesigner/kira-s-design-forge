@@ -3,7 +3,7 @@ Options -Indexes
 DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
 
-<Files ".contact-config.php">
+<Files "contact-config.php">
   Require all denied
 </Files>
 
