@@ -2,17 +2,24 @@
 
 ## Current Sprint
 
-Post-release documentation and asset maintenance
+KiraEstate portfolio integration
 
 ## In Progress
 
-- No active implementation work. The optimization, manifesto, and Majestic preview releases are live and verified.
+- No active implementation work. KiraEstate and the 404/robots additions have passed their scoped local checks.
 
 ## To Do
 
 - [ ] Add a public DMS URL if one becomes available
 
 ## Done
+
+- [x] Inspect `https://kiraestate.netlify.app/` and document the verified property discovery, filtering, detail, visit-scheduling, and inquiry flows
+- [x] Capture privacy-reviewed live desktop and mobile evidence and generate optimized responsive AVIF/WebP derivatives
+- [x] Add KiraEstate as the sixth primary case study without changing the KirzKit developer-tools placement
+- [x] Validate the KiraEstate cards and case-study route at 390, 768, 1440, and 1920 pixels, including JavaScript-disabled rendering
+- [x] Replace both static 404 entry points with the accessible editorial recovery page and configure `ErrorDocument 404 /404.html`
+- [x] Confirm `robots.txt` is valid plain-text syntax and references the canonical sitemap
 
 - [x] Commit release `7756473`, push `main`, complete DirectAdmin workflow run `29879563587`, and pass the live four-viewport production audit
 - [x] Refresh Majestic's supplied full-page case-study capture with responsive AVIF/WebP variants; publish `20ca6ef` through successful DirectAdmin workflow `29879956973`

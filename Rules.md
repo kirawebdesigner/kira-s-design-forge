@@ -4,7 +4,8 @@
 
 - Preserve the exported template's design and interaction quality.
 - Do not redesign from scratch, simplify the layout, or replace it with a generic developer portfolio.
-- Publish only Zewijuna, YourCloser, DMS, Pommy, and Majestic.
+- Publish only Zewijuna, YourCloser, DMS, Pommy, Majestic, and KiraEstate as primary case studies.
+- Treat KiraEstate listings, prices, property counts, people, phone numbers, and contact details as sample interface content unless independently verified.
 - Treat the supplied clinic administration screenshot as DMS evidence.
 - Write concise, specific, human copy focused on products, systems, and operational software.
 - Avoid generic portfolio filler and unsupported claims.

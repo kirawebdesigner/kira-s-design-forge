@@ -2,7 +2,7 @@
 
 ## Current Architecture
 
-The project is a static Framer export consisting of nine retained public HTML files:
+The project is a static Framer export consisting of ten retained public HTML files:
 
 - `/index.html`
 - `/404.html`
@@ -13,6 +13,7 @@ The project is a static Framer export consisting of nine retained public HTML fi
 - `/work/dms/index.html`
 - `/work/pommy/index.html`
 - `/work/majestic/index.html`
+- `/work/kiraestate/index.html`
 
 There is no `package.json`, source component tree, or build system. The static site is tracked in Git and retains Framer-generated CSS, serialized data, runtime scripts, and fonts. Project screenshots and the homepage restoration layer are local under `assets/`.
 
@@ -45,6 +46,7 @@ Target public routes:
 - `/work/dms/`
 - `/work/pommy/`
 - `/work/majestic/`
+- `/work/kiraestate/`
 - `/404/` — portfolio-branded not-found page
 - `/404.html` — direct static-host not-found document
 
@@ -78,8 +80,8 @@ Unverified facts must not appear. The user-supplied clinic dashboard screenshot 
 ## Validation
 
 - HTML/link audit
-- Automated screenshots at all required viewport widths across all nine retained routes
-- Fresh full-page evidence captures at 390px and 1440px for the homepage, work index, five case studies, and not-found page
+- Automated screenshots at all required viewport widths across all ten retained routes
+- Fresh evidence captures at 390px and 1440px for the homepage, work index, six case studies, and not-found page
 - Horizontal overflow and clipping checks
 - Navigation and mobile-menu interaction checks
 - Scroll-linked read-along, rapid-scroll, reverse-scroll, and reduced-motion checks

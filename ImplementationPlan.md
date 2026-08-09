@@ -1,5 +1,16 @@
 # Implementation Plan
 
+## KiraEstate Integration
+
+- [x] Inspect the live product, routes, interface behavior, and public content boundaries.
+- [x] Capture privacy-reviewed desktop and mobile evidence from the live deployment.
+- [x] Generate responsive AVIF/WebP card and case-study derivatives.
+- [x] Add KiraEstate to the homepage, work index, sitemap, and a dedicated case-study route.
+- [x] Run responsive, metadata, accessibility, image, console, link, and JavaScript-disabled validation.
+- [x] Replace the 404 experience with a lightweight, accessible recovery page and connect the server `ErrorDocument` rule.
+- [x] Revalidate the root `robots.txt` contents and sitemap reference.
+- [ ] Publish only after explicit user authorization.
+
 ## Release Status
 
 - [x] Publish the validated optimization and manifesto release in commit `7756473` (DirectAdmin workflow `29879563587` succeeded).
@@ -105,7 +116,7 @@
 - Prepare a clean static project ready for a future GitHub repository.
 - Produce the full requested report and explicit screenshot, project-information, and link checklists.
 
-## Final Audit Evidence
+## Original Final Audit Evidence (Before KiraEstate)
 
 - Nine retained routes tested at ten required viewport widths: 90/90 passing.
 - Fresh 390px and 1440px full-page captures stored outside production assets under `qa-artifacts/final-audit/`.

@@ -56,7 +56,7 @@ Do not introduce:
 ## Restored Homepage Systems
 
 - Services use six full-width rows with separators and horizontal hover movement.
-- Featured work uses four two-column cards plus a deliberate full-width fifth card on desktop, collapsing to one column on mobile.
+- Featured work uses three asymmetric two-card rows on desktop, collapsing to one column on mobile.
 - Builder Mindset uses four high-contrast principle cards with readable copy instead of screenshot thumbnails.
 - Capabilities use a numbered editorial list rather than a logo wall.
 - Contact and footer use rich dark compositions consistent with the template's original visual weight.
@@ -108,5 +108,6 @@ Check typography, navigation, menu, cards, image crops, buttons, contact section
 - The manifesto uses a concise two-column editorial composition at desktop widths and a natural single-column reading order on mobile. Any enhancement uses only opacity and transform; all content remains readable without JavaScript or motion.
 - Pommy uses the user-supplied July 2026 full-page capture as the authoritative source. Versioned AVIF/WebP derivatives replace the displayed card and case-study images while all earlier originals remain preserved.
 - Majestic uses the latest user-supplied full-page capture for its case-study scroll preview. Responsive 640px and 1040px AVIF/WebP derivatives replace the displayed preview while the original remains archived and never loads on the homepage or work index.
+- KiraEstate uses privacy-reviewed captures from the live public concept. Its card, desktop search view, and mobile hero use responsive AVIF/WebP derivatives, with sample inventory clearly framed as interface evidence rather than business proof.
 - KirzKit appears in a small ruled Open Source / Developer Tools section, not in the main project grid. The row uses the portfolio's existing typography, neutral palette, and motion language.
 - GitHub and LinkedIn are confirmed profile links and appear consistently in every footer. The homepage Person structured data includes both in `sameAs`.

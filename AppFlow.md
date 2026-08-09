@@ -48,7 +48,7 @@ The exact section order may follow the existing template where doing so preserve
 
 - Home links return to meaningful homepage anchors.
 - Work links resolve to `/work/`.
-- Only the five approved project routes appear in cards or project navigation.
+- Only the six approved project routes appear in cards or project navigation.
 - Unconfirmed external links are hidden.
 - The mobile menu must retain the template's existing interaction quality.
 - Every route must expose the same complete content and navigation when JavaScript is disabled; JavaScript only enhances interaction.
@@ -76,9 +76,13 @@ Restaurant-commerce case study with a supplied responsive visual, menu-discovery
 
 Corporate website case study with a responsive full-page visual preview. The current preview is generated from the supplied capture and loads only in the case study.
 
+### KiraEstate
+
+Real-estate discovery and inquiry concept for Addis Ababa; property search and filters, listing comparison, detail pages, service positioning, visit scheduling, and direct inquiry paths. Portfolio copy must identify the public interface's listings and contact data as sample content rather than verified inventory.
+
 ### KirzKit
 
-Separate open-source/developer-tools mention linking to its GitHub repository. It is intentionally not part of the five-case-study project sequence.
+Separate open-source/developer-tools mention linking to its GitHub repository. It is intentionally not part of the six-case-study project sequence.
 
 ### DMS visual clarification
 

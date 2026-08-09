@@ -67,6 +67,7 @@ This static portfolio has no runtime database. This document defines the content
 3. `dms`
 4. `pommy`
 5. `majestic`
+6. `kiraestate`
 
 No additional primary case-study record may be published during this scope.
 
@@ -80,7 +81,7 @@ No additional primary case-study record may be published during this scope.
 | summary | string | yes | Factual concise description |
 | featured | boolean | yes | Controls the separate tooling section |
 
-KirzKit is the current OpenSourceTool record. It links to `https://github.com/kirawebdesigner/KirzKit` and remains separate from the five primary case studies.
+KirzKit is the current OpenSourceTool record. It links to `https://github.com/kirawebdesigner/KirzKit` and remains separate from the six primary case studies.
 
 ## Relationships
 
@@ -92,3 +93,5 @@ KirzKit is the current OpenSourceTool record. It links to `https://github.com/ki
 ## Current Responsive Asset Notes
 
 The Majestic full-page case-study preview uses responsive `website-fullpage-preview-640` and `website-fullpage-preview-1040` AVIF/WebP variants. The original user-supplied PNG is retained as source material and is not requested during initial navigation.
+
+KiraEstate uses live public captures for its homepage card, property-search evidence, and mobile composition. Sample listing and contact content must be marked as demonstration data in the case-study copy.

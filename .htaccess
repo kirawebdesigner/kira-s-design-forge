@@ -1,6 +1,7 @@
 Options -Indexes
 # DirectAdmin/LiteSpeed public document-root defaults; account reactivated 2026-07-28.
 DirectoryIndex index.html
+ErrorDocument 404 /404.html
 
 <IfModule mod_authz_core.c>
   Require all granted

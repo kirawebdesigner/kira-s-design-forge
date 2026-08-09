@@ -42,8 +42,9 @@ The homepage must quickly answer:
   - DMS
   - Pommy
   - Majestic
-- Convert five existing work-detail routes into accurate product case studies.
-- Feature KirzKit separately as an Open Source / Developer Tools project, not as a sixth product case study.
+  - KiraEstate
+- Maintain six accurate product case studies.
+- Feature KirzKit separately as an Open Source / Developer Tools project, not as a seventh product case study.
 - Link the verified GitHub and LinkedIn profiles from the shared footer.
 - Remove or repurpose unused template project and blog routes without leaving visible dead ends.
 - Use only real project facts, screenshots, and confirmed links.
@@ -63,7 +64,7 @@ The homepage must quickly answer:
 ## Success Criteria
 
 - No visible trace of the original owner, template vendor, purchased-template CTAs, retired projects, or fake content remains.
-- The five approved projects are the only primary portfolio projects.
+- The six approved projects are the only primary portfolio projects.
 - Every displayed project image is a real product screenshot or a clearly documented temporary placeholder.
 - The site is usable without horizontal overflow or clipped content at every required viewport.
 - Navigation and internal links resolve correctly.
@@ -80,7 +81,8 @@ The homepage must quickly answer:
 ## Current Release State
 
 - Production canonical URL: `https://kiraweb.pro.et/`.
-- The five primary case studies remain Zewijuna, YourCloser, DMS, Pommy, and Majestic.
+- The six primary case studies are Zewijuna, YourCloser, DMS, Pommy, Majestic, and KiraEstate.
+- KiraEstate is documented as a live real-estate discovery and inquiry concept. Sample listings, prices, contact details, people, and property counts are not presented as verified commercial inventory or outcomes.
 - KirzKit is presented separately as an open-source/developer-tooling project, linked to `https://github.com/kirawebdesigner/KirzKit`.
 - Confirmed public contact and profile links are `contact@kira.pro.et`, `https://github.com/kirawebdesigner/`, and `https://www.linkedin.com/in/kirubel-daniel/`.
 - The Majestic full-page case-study preview was refreshed from the supplied capture and released in commit `20ca6ef`; responsive AVIF/WebP derivatives are used instead of the original PNG on the page.
