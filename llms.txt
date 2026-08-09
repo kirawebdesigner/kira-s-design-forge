@@ -11,6 +11,12 @@ Contact: contact@kira.pro.et
 - [Selected work](https://kiraweb.pro.et/work/): Index of Kirubel Daniel's product and case-study work.
 - [KirzKit](https://github.com/kirawebdesigner/KirzKit): Open-source developer tooling project maintained by Kirubel Daniel.
 
+## Services
+
+- [Web application development](https://kiraweb.pro.et/services/web-application-development/): Product structure, responsive frontend, backend, databases, deployment, and QA.
+- [SaaS product development](https://kiraweb.pro.et/services/saas-product-development/): Multi-tenant products, subscriptions, permissions, administration, and backend systems.
+- [Business automation](https://kiraweb.pro.et/services/business-automation/): Operational workflows, integrations, approvals, notifications, and data movement.
+
 ## Selected case studies
 
 - [Zewijuna](https://kiraweb.pro.et/work/zewijuna/): Mobile and web matchmaking product.

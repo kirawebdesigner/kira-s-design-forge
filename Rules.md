@@ -9,6 +9,8 @@
 - Treat the supplied clinic administration screenshot as DMS evidence.
 - Write concise, specific, human copy focused on products, systems, and operational software.
 - Avoid generic portfolio filler and unsupported claims.
+- Service pages must solve a distinct visitor question, link to relevant project evidence, and avoid location or keyword doorway-page patterns.
+- Keep metadata unique and structured data consistent with visible page content.
 
 ## Evidence Rules
 
@@ -31,6 +33,7 @@
 - Synchronize repeated global content across all retained pages.
 - Use local relative paths for new portfolio assets.
 - Do not add dependencies without a clear need.
+- Contact submissions must validate length and email syntax, reject header injection, include a honeypot, and never expose recipient credentials in client-side code.
 - Do not initialize, commit, push, or modify a Git remote without explicit user instruction.
 - Do not delete surplus pages until inbound and outbound links have been remapped.
 

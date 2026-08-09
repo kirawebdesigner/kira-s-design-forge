@@ -14,6 +14,9 @@ flowchart TD
     A --> H["About and capabilities"]
     H --> B
     H --> G
+    H --> S["Search-focused service page"]
+    S --> B
+    S --> G
 ```
 
 ## Homepage Sequence
@@ -32,6 +35,10 @@ flowchart TD
 The exact section order may follow the existing template where doing so preserves its strongest pacing.
 
 ## Project Journey
+
+## Service Journey
+
+Homepage capability link → focused service definition → practical deliverables → related case-study evidence → common questions → contact action.
 
 1. Project title and concise product definition
 2. Category, year/state, and confirmed live link if available

@@ -2,11 +2,11 @@
 
 ## Current Sprint
 
-KiraEstate portfolio integration
+Search-focused service pages and metadata completeness
 
 ## In Progress
 
-- No active implementation work. KiraEstate and the 404/robots additions have passed their scoped local checks.
+- No active implementation work. The service routes, metadata matrix, and direct contact delivery passed local validation.
 
 ## To Do
 
@@ -21,6 +21,10 @@ KiraEstate portfolio integration
 - [x] Replace both static 404 entry points with the accessible editorial recovery page and configure `ErrorDocument 404 /404.html`
 - [x] Confirm `robots.txt` is valid plain-text syntax and references the canonical sitemap
 - [x] Add explicit AI crawler access, verified entity fields, and a conservative `llms.txt` source map
+- [x] Add dedicated web application, SaaS product, and business automation service routes with visible internal links
+- [x] Send homepage form submissions directly to both approved recipient addresses through the DirectAdmin PHP mail transport
+- [x] Pass the 26-route/viewport browser matrix for all new service routes, metadata, JSON-LD, JavaScript-disabled content, and responsive layout
+- [x] Validate direct-contact POST behavior, error handling, honeypot handling, and browser success state without sending a live test email
 
 - [x] Commit release `7756473`, push `main`, complete DirectAdmin workflow run `29879563587`, and pass the live four-viewport production audit
 - [x] Refresh Majestic's supplied full-page case-study capture with responsive AVIF/WebP variants; publish `20ca6ef` through successful DirectAdmin workflow `29879956973`

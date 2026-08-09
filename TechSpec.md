@@ -2,7 +2,7 @@
 
 ## Current Architecture
 
-The project is a static Framer export consisting of ten retained public HTML files:
+The project is a static Framer export with ten retained portfolio HTML files plus three native static service routes:
 
 - `/index.html`
 - `/404.html`
@@ -14,6 +14,9 @@ The project is a static Framer export consisting of ten retained public HTML fil
 - `/work/pommy/index.html`
 - `/work/majestic/index.html`
 - `/work/kiraestate/index.html`
+- `/services/web-application-development/index.html`
+- `/services/saas-product-development/index.html`
+- `/services/business-automation/index.html`
 
 There is no `package.json`, source component tree, or build system. The static site is tracked in Git and retains Framer-generated CSS, serialized data, runtime scripts, and fonts. Project screenshots and the homepage restoration layer are local under `assets/`.
 
@@ -24,6 +27,8 @@ There is no `package.json`, source component tree, or build system. The static s
 - Prefer controlled transformation scripts for repeated, deterministic changes, but keep the final deliverable deployable as static files.
 - Store captured project screenshots locally under `assets/projects/<project>/`.
 - Add only minimal custom CSS or JavaScript when generated markup cannot support required content safely.
+- Keep service routes dependency-free and share their presentation through `assets/service-pages.css`.
+- Submit the homepage contact form to the same-origin `contact.php` endpoint, which validates input and uses the DirectAdmin PHP mail transport to deliver to both private recipients without opening a visitor email client.
 - Use the shared `portfolio-restoration.css` and `portfolio-restoration.js` layer for the synchronized footer, accessible mobile menu, read-along behavior, contact flow, and export-specific visibility fixes.
 - Avoid introducing a new framework unless the static export proves impossible to maintain without breaking behavior.
 - The manifesto is a static semantic component with lightweight progressive enhancement; it does not depend on React, Motion, Framer, or Astryx.

@@ -1,5 +1,4 @@
 (() => {
-  const EMAIL = "contact@kira.pro.et";
   const TRIGGER = 'nav [data-framer-name="Variant 1"][tabindex]';
   let returnFocus = null;
 
@@ -73,19 +72,32 @@
     }
   });
 
-  document.addEventListener("submit", (event) => {
+  document.addEventListener("submit", async (event) => {
     const form = event.target.closest?.("#portfolio-contact-form");
     if (!form) return;
     event.preventDefault();
     if (!form.reportValidity()) return;
-    const data = new FormData(form);
-    const name = String(data.get("name") || "").trim();
-    const email = String(data.get("email") || "").trim();
-    const message = String(data.get("message") || "").trim();
-    const subject = `Portfolio inquiry from ${name}`;
-    const body = `Name: ${name}\nEmail: ${email}\n\nProject details:\n${message}`;
-    const draft = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    form.dataset.mailtoDraft = draft;
-    location.href = draft;
+    const button = form.querySelector('button[type="submit"]');
+    const status = form.querySelector("#portfolio-form-status");
+    button.disabled = true;
+    button.textContent = "Sending…";
+    status.textContent = "Sending your message…";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      const result = await response.json();
+      if (!response.ok) throw new Error(result.message || "The message could not be sent.");
+      form.reset();
+      status.textContent = result.message;
+      button.textContent = "Message sent ✓";
+    } catch (error) {
+      status.textContent = error.message || "The message could not be sent. Please try again.";
+      button.disabled = false;
+      button.textContent = "Send message ↗";
+    }
   });
 })();

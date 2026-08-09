@@ -18,6 +18,14 @@
 - [x] Add a concise `llms.txt` source map and include it in the static deployment workflow.
 - [x] Validate robots syntax, JSON-LD, sitemap references, identity links, and deployment copying.
 
+## Search-Focused Service Pages
+
+- [x] Audit unique metadata, canonicals, OpenGraph tags, and structured data across retained public routes.
+- [x] Add focused pages for web applications, SaaS products, and business automation.
+- [x] Connect service pages from homepage capabilities, related case studies, sitemap, and `llms.txt`.
+- [x] Run all-route metadata, structured-data, responsive, accessibility, image, and link validation.
+- [x] Replace the contact form's `mailto:` submission with validated same-origin server delivery.
+
 ## Release Status
 
 - [x] Publish the validated optimization and manifesto release in commit `7756473` (DirectAdmin workflow `29879563587` succeeded).

@@ -33,6 +33,10 @@ The homepage must quickly answer:
 
 ## MVP Scope
 
+- Dedicated, people-first service pages for web application development, SaaS product development, and business automation.
+- Unique titles, descriptions, canonicals, OpenGraph metadata, and accurate structured data across every indexable route.
+- Visible internal links from homepage capabilities to each service page.
+
 - Preserve the exported Framer template's premium composition, typography, animation, interactions, and responsive behavior.
 - Replace all template identity and promotional residue.
 - Rewrite the homepage around Kirubel's product-building positioning.

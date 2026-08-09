@@ -33,6 +33,10 @@ Retain the existing Framer color tokens and high-contrast neutral foundation dur
 Do not introduce:
 
 - Generic blue-purple AI gradients
+
+## Service Pages
+
+Service routes use the same warm neutral canvas, black editorial type, restrained blue focus color, oversized headings, fine rules, pill actions, and responsive spacing as the portfolio. They remain content-first and avoid generic landing-page card stacks.
 - Excessive glassmorphism
 - Repetitive glowing borders
 - A generic rounded-card/bento system

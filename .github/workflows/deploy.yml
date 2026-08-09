@@ -16,8 +16,8 @@ jobs:
         shell: bash
         run: |
           mkdir -p _site
-          cp index.html 404.html robots.txt llms.txt sitemap.xml .htaccess _site/
-          cp -R 404 assets work _site/
+          cp index.html 404.html contact.php robots.txt llms.txt sitemap.xml .htaccess _site/
+          cp -R 404 assets services work _site/
 
       - name: Publish static site via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
