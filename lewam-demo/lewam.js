@@ -1,4 +1,4 @@
-const API='https://8de13ef8-ab04-4bef-bf86-752f49a8c6e9-dev.e1-us-east-azure.choreoapis.dev/lewam/lewam/v1.0';
+const API='https://8de13ef8-ab04-4bef-bf86-752f49a8c6e9-prod.e1-us-east-azure.choreoapis.dev/lewam/lewam/v1.0';
 let selected={name:'Ye-Buna Creator Pro',amount:500},subId=null,retryStep=0;
 const $=s=>document.querySelector(s),toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3000)};
 function event(name,detail=''){const box=$('#events');if(box.querySelector('.empty'))box.innerHTML='';const d=document.createElement('div');d.className='event';d.innerHTML=`<b>${name}</b><span>${detail}</span><time>${new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}</time>`;box.prepend(d)}
