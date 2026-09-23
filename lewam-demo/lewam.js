@@ -1,4 +1,4 @@
-const LEWAM_API_BASE='https://8de13ef8-ab04-4bef-bf86-752f49a8c6e9-prod.e1-us-east-azure.choreoapis.dev/lewam/lewam/v1.0';
+const LEWAM_API_BASE='https://etb-billing-sandbox.onrender.com';
 let selected={name:'Ye-Buna Creator Pro',amount:500},currentSubscriptionId=null,isMandateAuthorized=false,walletIsEmpty=false,simulationRunning=false,lastSubscription={},retryAttempt=0;
 const $=s=>document.querySelector(s),toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),3200)};
 const event=(name,detail='',failure=false)=>{const box=$('#events'),stamp=new Date().toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'}),identity=detail.replace(/\s*·\s*next\s+.*$/,'').trim(),key=`${name}|${identity}`;if([...box.querySelectorAll('.event')].some(row=>row.dataset.eventKey===key))return;if(box.querySelector('.empty'))box.innerHTML='';const row=document.createElement('div');row.className='event'+(failure?' failure':'');row.dataset.eventKey=key;row.innerHTML=`<b>${name}</b><span>${detail}</span><time>${stamp}</time>`;box.prepend(row)};
