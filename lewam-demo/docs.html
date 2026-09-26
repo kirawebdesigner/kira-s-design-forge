@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>LEWAM Developer Quick Start</title>
+  <meta name="description" content="LEWAM staging API endpoints, JSON examples, and webhook events.">
+  <link rel="stylesheet" href="lewam.css"><link rel="stylesheet" href="lewam-docs.css">
+</head>
+<body>
+  <div class="shell docs-shell">
+    <header class="topbar"><a class="brand" href="./"><span class="mark">ል</span><span>LEWAM <small>ልዋም</small></span></a><div class="top-actions"><span class="live-dot"><i></i> Staging guide</span><a class="ghost" href="./">Back to simulation ↗</a></div></header>
+    <main class="docs-main">
+      <section class="docs-hero"><p class="eyebrow">Developer quick start · staging</p><h1>Build recurring ETB access around one mandate.</h1><p class="lede">Create a subscription once, listen for renewal outcomes, and protect access with LEWAM’s graceful dunning ladder.</p><div class="docs-meta"><div><span>Staging API base</span><code>https://etb-billing-sandbox.onrender.com</code></div><div><span>Authorization</span><code>Bearer sk_test_yeshay_01</code></div><div><span>Interactive simulation</span><a href="./">kiraweb.pro.et/lewam-demo/ ↗</a></div></div></section>
+      <div class="docs-layout">
+        <aside class="docs-nav" aria-label="Guide sections"><a href="#subscription">01 · Create subscription</a><a href="#renewal">02 · Renewal webhook</a><a href="#dunning">03 · Dunning events</a><a href="#security">04 · Integration notes</a></aside>
+        <div class="docs-content">
+          <section class="doc-section" id="subscription"><p class="eyebrow">01 · Enrollment</p><h2>Create a subscription</h2><p>When a creator chooses a monthly plan, call the staging API from your server. Amounts are integer cents: 500 ETB is <code>50000</code>.</p><div class="code-card"><div class="code-label">POST /v1/subscriptions</div><pre><code>curl -X POST https://etb-billing-sandbox.onrender.com/v1/subscriptions \
+  -H 'Content-Type: application/json' \
+  -H 'Authorization: Bearer sk_test_yeshay_01' \
+  -d '{
+    "phone": "0911223344",
+    "name": "Creator Name",
+    "plan_name": "YeShay Pro Monthly",
+    "amount": 50000
+  }'</code></pre></div><div class="code-card"><div class="code-label">200 · subscription.active</div><pre><code>{
+  "id": "sub_a960ea682d30eb25bb",
+  "status": "active",
+  "mandate_id": "MND_781d58343511",
+  "current_period_end": "2026-10-26T19:00:00.000Z",
+  "mandate_deep_link": "merchant://10000000016?mctShortCode=199183&..."
+}</code></pre></div><p class="callout"><strong>Next:</strong> launch <code>mandate_deep_link</code> so the customer authorizes the Telebirr mandate with their PIN once.</p></section>
+          <section class="doc-section" id="renewal"><p class="eyebrow">02 · Silent renewal</p><h2>Listen for invoice.paid</h2><p>On Day 30, LEWAM attempts the mandate debit silently and notifies your server when the billing period rolls forward.</p><div class="code-card"><div class="code-label">POST /api/webhooks/lewam</div><pre><code>{
+  "event": "invoice.paid",
+  "data": {
+    "subscription_id": "sub_a960ea682d30eb25bb",
+    "customer_phone": "0911223344",
+    "amount": 50000,
+    "currency": "ETB",
+    "period_end": "2026-11-26T19:00:00.000Z"
+  }
+}</code></pre></div><p class="callout"><strong>Your action:</strong> extend the creator’s Pro access for another billing period after verifying the webhook.</p></section>
+          <section class="doc-section" id="dunning"><p class="eyebrow">03 · Recovery</p><h2>Handle low-balance protection</h2><p>If the wallet is empty, LEWAM preserves access while retrying at <strong>+1 day → +3 days → +7 days</strong> before cancellation.</p><div class="code-card failure-card"><div class="code-label">invoice.payment_failed · 40401</div><pre><code>{
+  "event": "invoice.payment_failed",
+  "data": {
+    "subscription_id": "sub_a960ea682d30eb25bb",
+    "status": "past_due",
+    "error_code": "40401",
+    "next_retry_at": "2026-10-27T19:00:00.000Z"
+  }
+}</code></pre></div><p class="callout"><strong>Recommended UX:</strong> show a quiet banner: “Your Pro renewal couldn’t process. Please top up your Telebirr wallet before tomorrow.”</p></section>
+          <section class="doc-section" id="security"><p class="eyebrow">04 · Integration notes</p><h2>Keep the boundary safe</h2><div class="notes-grid"><div><strong>Server-side only</strong><p>Keep the staging secret in your server environment. Never ship it in browser JavaScript.</p></div><div><strong>Verify webhooks</strong><p>Validate the sender signature and make event handling idempotent before changing access.</p></div><div><strong>Sandbox status</strong><p>This staging engine is mock-mode and does not move real money.</p></div><div><strong>Need help?</strong><p>Coordinate with Kirubel Daniel and the LEWAM engineering team for staging integration support.</p></div></div></section>
+        </div>
+      </div>
+    </main>
+    <footer><span><span class="mark small">ል</span> LEWAM · Developer docs</span><span>Staging only · no real money moves</span></footer>
+  </div>
+</body>
+</html>
