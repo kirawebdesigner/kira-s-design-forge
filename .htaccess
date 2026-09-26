@@ -3,6 +3,12 @@ Options -Indexes
 DirectoryIndex index.html index.php
 ErrorDocument 404 /404.html
 
+# Keep the public developer guide URL clean while serving the static document.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^lewam-demo/docs/?$ /lewam-demo/docs.html [L]
+</IfModule>
+
 <Files "contact-config.php">
   Require all denied
 </Files>
